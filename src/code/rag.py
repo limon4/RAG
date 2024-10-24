@@ -1,3 +1,5 @@
+import os.path
+
 import torch.nn.functional
 from langchain_community.chat_models import ChatOllama
 from langchain_community.document_loaders import PyPDFLoader
@@ -18,6 +20,7 @@ class ChatPDF:
     chain = None
     LLM_MODEL = "mistral"
     ST_MODEL = "Santp98/SBERT-pairs-bert-base-spanish-wwm-cased"
+    EMBEDDING_MODEL = "PlanTL-GOB-ES/RoBERTalex"
 
     def __init__(self):
         self.model = ChatOllama(model=self.LLM_MODEL)
@@ -42,16 +45,24 @@ class ChatPDF:
         chunks = filter_complex_metadata(chunks)
         #embeddings = FastEmbedEmbeddings()
         embeddings = HuggingFaceEmbeddings(
-            model_name="PlanTL-GOB-ES/RoBERTalex",
+            model_name=self.EMBEDDING_MODEL,
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': False}
         )
+        pdf_name = pdf_file_path.split("\\")[-1].split(".")[0]
+        persist_directory = fr"C:\Users\rodri\PycharmProjects\AI\RAG\src\code\chroma_db_{pdf_name}"
 
-        vector_store = Chroma.from_documents(
-            documents=chunks,
-            embedding=embeddings
-        )
-        self.retriever = vector_store.as_retriever(
+        if os.path.exists(persist_directory):
+            self.vector_store = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
+        else:
+            self.vector_store = Chroma.from_documents(
+                documents=chunks,
+                embedding=embeddings,
+                persist_directory=persist_directory
+            )
+            self.vector_store.persist()
+
+        self.retriever = self.vector_store.as_retriever(
             search_type="similarity_score_threshold",
             search_kwargs={"k":3, "score_threshold":0.5}
         )
