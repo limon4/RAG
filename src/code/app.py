@@ -47,8 +47,10 @@ def similarity_score():
             if not st.session_state["user_input"]:
                 st.error("Please enter a source sentence")
             else:
-                scores = st.session_state["assistant"].compute_similarity_score(
-                    st.session_state["user_input"],
+                print("Response:")
+                print(st.session_state["messages"][-1][0])
+                score = st.session_state["assistant"].compute_similarity_score(
+                    st.session_state["messages"][-1][0],
                     source_sentence
                 )
 
@@ -56,8 +58,7 @@ def similarity_score():
                 with col1:
                     st.write("Score")
                 with col2:
-                    for score in scores:
-                        st.write(f"{score:.2f}")
+                    st.write(f"{score:.2f}")
 
 
     st.markdown(
