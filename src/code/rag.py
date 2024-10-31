@@ -20,7 +20,7 @@ class ChatPDF:
     chain = None
     LLM_MODEL = "mistral"
     ST_MODEL = "Santp98/SBERT-pairs-bert-base-spanish-wwm-cased"
-    EMBEDDING_MODEL = "PlanTL-GOB-ES/roberta-base-bne"
+    EMBEDDING_MODEL = "PlanTL-GOB-ES/RoBERTalex"
 
     def __init__(self):
         self.model = ChatOllama(model=self.LLM_MODEL)
@@ -89,3 +89,4 @@ class ChatPDF:
         ga_embedding = model.encode([golden_answer], convert_to_tensor=True)
         cosine_similarities = torch.nn.functional.cosine_similarity(ra_embedding, ga_embedding)
         return cosine_similarities.item()
+
