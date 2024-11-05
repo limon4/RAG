@@ -18,9 +18,12 @@ class ChatPDF:
     vector_store = None
     retriever = None
     chain = None
-    LLM_MODEL = "mistral"
+    LLM_MODEL = "llama3.2"
     ST_MODEL = "Santp98/SBERT-pairs-bert-base-spanish-wwm-cased"
     EMBEDDING_MODEL = "PlanTL-GOB-ES/RoBERTalex"
+
+    import sqlite3
+    print(sqlite3.sqlite_version)
 
     def __init__(self):
         self.model = ChatOllama(model=self.LLM_MODEL)
