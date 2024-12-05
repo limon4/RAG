@@ -1,12 +1,17 @@
 import pandas as pd
 import psycopg2
-from ragas.embeddings import LangchainEmbeddingsWrapper
-from ragas.llms import LangchainLLMWrapper
-from ragas import EvaluationDataset
-from ragas.metrics import LLMContextRecall, Faithfulness, FactualCorrectness, SemanticSimilarity
+from datasets import Dataset
+from ragas.metrics import (
+    answer_relevancy,
+    faithfulness,
+    context_recall,
+    context_precision,
+    answer_correctness,
+    answer_similarity
+)
 from ragas import evaluate
 
-from src.code.rag import RAG
+from src.code.generator import RAG
 
 question_dataset_path=r"C:\Users\rodri\PycharmProjects\AI\RAG\src\resources\Cuatrecasas-OEG-Spanish Workers Statute Eval Dataset.xlsx - 1st set.csv"
 
@@ -63,6 +68,7 @@ try:
         ground_truths = []
         answers = []
         contexts = []
+        rag_dataset = []
         for row in rows:
             id_q = row[0]
             question = row[1]
@@ -70,38 +76,41 @@ try:
             golden_answer = row[2]
             ground_truths.append(golden_answer)
 
-            if bool_rag:
-                rag_ans, rag_context = rag.ask(question)
-                contexts.append([context.page_content for context in rag_context])
-            else:
-                rag_ans = rag.model.invoke(question).content
-                EMBEDDING_MODEL = ''
+            #if bool_rag:
+            rag_ans, rag_context = rag.ask(question)
+            contexts.append([context.page_content for context in rag_context])
+            #else:
+            #    rag_ans = rag.model.invoke(question).content
+            #    EMBEDDING_MODEL = ''
+
+            # cursor.execute("INSERT INTO respuestas (pregunta_id, llm_model, embed_model, respuesta) VALUES (%s, %s, %s, %s);",
+            #               (id_q, rag.llm_model, rag.embedding_model, rag_ans))
 
             answers.append(rag_ans)
+            rag_dataset.append(
+                {
+                    "question" : question,
+                    "answer" : rag_ans,
+                    "contexts" : [context.page_content for context in rag_context],
+                    "ground_truths" : [golden_answer]
+                }
+            )
 
-            #cursor.execute("INSERT INTO respuestas (pregunta_id, llm_model, embed_model, respuesta) VALUES (%s, %s, %s, %s);",
-            #               (id_q, rag.llm_model, rag.embedding_model, rag_ans))
-            print(f"Se ha ingestado la respuesta a la pregunta {id_q}")
+        rag_df = pd.DataFrame(rag_dataset)
+        rag_eval_dataset = Dataset.from_pandas(rag_df)
 
-        data = {
-            "question": queries,
-            "answer": answers,
-            "contexts": contexts,
-            "ground_truths": ground_truths
-        }
-
-        eval_dataset = EvaluationDataset.from_dict(data)
-        evaluator_llm = LangchainLLMWrapper(rag.model)
-        evaluator_embedding = LangchainEmbeddingsWrapper(rag.embeddings)
-
-        metrics = [
-            LLMContextRecall(llm=evaluator_llm),
-            FactualCorrectness(llm=evaluator_llm),
-            Faithfulness(llm=evaluator_llm),
-            SemanticSimilarity(embeddings=evaluator_embedding)
-        ]
-        results = evaluate(dataset=eval_dataset, metrics=metrics).scores
-        print(results)
+        result = evaluate(
+            rag_eval_dataset,
+            metrics=[
+                context_precision,
+                faithfulness,
+                answer_relevancy,
+                context_recall,
+                answer_correctness,
+                answer_similarity
+            ],
+        )
+        print(result)
 
         print("Se han ingestado todas las respuestas")
         conexion_bd.commit()

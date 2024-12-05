@@ -3,25 +3,17 @@ import os
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores.utils import filter_complex_metadata
-from langchain_core.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_ollama import ChatOllama
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from src.code.multi_query_retriever import MultiQueryRetriever
 
+class Retriever:
 
-class RAG:
-
-    def __init__(self, llm_model: str, embedding_model: str | None, pdf_file_path: str):
+    def __init__(self, pdf_file_path: str, embedding_model: str | None):
 
         self.pdf_file_path = pdf_file_path
-        self.llm_model = llm_model
-        self.embedding_model = embedding_model
         self.vector_store = None
-
-        #inicializamos el modelo generativo
-        self.model = ChatOllama(model=llm_model)
+        self.embedding_model = embedding_model
 
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1024,
@@ -35,20 +27,8 @@ class RAG:
                 encode_kwargs={'normalize_embeddings': False}
         )
 
-        #creamos un template para el prompt que se le va a pasar al LLM
-        self.prompt_template = PromptTemplate.from_template(
-            """
-            <s> [INST] Eres un asistente para tareas de respuesta a preguntas. Utiliza los siguientes elementos
-            contextuales para responder a la pregunta. Si no sabes la respuesta, di simplemente que no lo sabes.
-            Sé conciso en tu respuesta. [/INST] </s>
-            [INST]Pregunta: {question}
-            Contexto: {context}
-            Respuesta: [/INST]
-            """
-        )
 
-
-    def ingest(self):
+    def _ingest(self):
         """
         Realiza la ingesta del fichero indicado en la variable pdf_file_path.
 
@@ -73,34 +53,16 @@ class RAG:
             self.vector_store = Chroma.from_documents(
                 documents=chunks,
                 embedding=self.embeddings,
-                persist_directory=persist_directory
+                persist_directory=persist_directory,
+                collection_metadata={"hnsw:space": "cosine"}
             )
-        """
-        self.retriever = vector_store.as_retriever(
+        """self.retriever = vector_store.as_retriever(
             search_type="similarity",
             search_kwargs={"k": 3}
-        )
-        """
+        )"""
 
+        return self.vector_store
 
-
-    def ask(self, query, expanded: bool = False):
-        """
-        Se realiza la pregunta deseada al modelo
-        :param query: Pregunta que se quiere realizar
-        :param expanded: Flag que indica si se desea expandir la pregunta o no
-        :return: Devuelve la respuesta generada por el modelo
-        """
-        multi_query_retriever = MultiQueryRetriever(self.vector_store)
-
-        if not expanded:
-            context = multi_query_retriever.retriever_fun(query, 3)
-        else:
-            context = multi_query_retriever.run(query)['documents'][:3]
-
-        context_text = "\n\n".join([doc.page_content for doc in context])
-
-        prompt = self.prompt_template.format(question=query, context=context_text)
-        answer = self.model.invoke(prompt)
-
-        return answer.content, context
+    def retriever(self, query: str, k: int = 3):
+        vector_store_retriever = self._ingest()
+        return vector_store_retriever.similarity_search_with_relevance_scores(query, k)

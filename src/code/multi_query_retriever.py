@@ -13,17 +13,6 @@ class MultiQueryRetriever:
         if document not in self.results:
             self.results.append(document)
 
-    def retriever_fun(self, query: str, top_k: int = None):
-        docs, scores = zip(*self.vector_store.similarity_search_with_score(query))
-        for doc, score in zip(docs, scores):
-            doc.metadata["score"] = score
-        aux = list(docs)
-        aux.sort(key=lambda x: x.metadata['score'], reverse=True)
-        if top_k is not None:
-            if top_k < len(aux):
-                return aux[:top_k]
-        return aux
-
     def run(self, query):
         """
         :param query: Query para la que se desea obtener los documentos relevantes.
