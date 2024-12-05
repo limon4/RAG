@@ -1,7 +1,9 @@
 import os
 
+from chromadb import Embeddings
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores.utils import filter_complex_metadata
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -12,7 +14,6 @@ class Retriever:
     def __init__(self, pdf_file_path: str, embedding_model: str | None):
 
         self.pdf_file_path = pdf_file_path
-        self.vector_store = None
         self.embedding_model = embedding_model
 
         self.text_splitter = RecursiveCharacterTextSplitter(
@@ -21,6 +22,7 @@ class Retriever:
         )
 
         #inicializamos el modelo para el cálculo de embeddings
+        #self.embeddings = FastEmbedEmbeddings()
         self.embeddings = HuggingFaceEmbeddings(
                 model_name=self.embedding_model,
                 model_kwargs={'device': 'cpu'},
@@ -42,26 +44,30 @@ class Retriever:
         docs = PyPDFLoader(file_path=self.pdf_file_path).load()
         chunks = self.text_splitter.split_documents(docs)
         chunks = filter_complex_metadata(chunks)
-        # embeddings = FastEmbedEmbeddings()
-        pdf_name = self.pdf_file_path.split("\\")[-1].split(".")[0]
+        pdf_name = "BOE"
         suf = self.embedding_model.split("/")[-1]
         persist_directory = fr"C:\Users\rodri\PycharmProjects\AI\RAG\src\code\chroma_db_{pdf_name}_{suf}"
 
-        if os.path.exists(persist_directory):
-            self.vector_store = Chroma(persist_directory=persist_directory, embedding_function=self.embeddings)
-        else:
-            self.vector_store = Chroma.from_documents(
-                documents=chunks,
-                embedding=self.embeddings,
-                persist_directory=persist_directory,
-                collection_metadata={"hnsw:space": "cosine"}
-            )
+        db = Chroma(
+            collection_name=f"{pdf_name}_{suf}",
+            embedding_function=self.embeddings,
+            persist_directory=r".\data",
+            collection_metadata={"hnsw:space": "cosine"}
+        )
+
+        ids = []
+        for i in range(len(chunks)):
+            ids.append(str(i))
+        db.add_documents(chunks, ids=ids)
+
+        print(db.get())
+        print(db.get(include=['embeddings', 'documents', 'metadatas']))
         """self.retriever = vector_store.as_retriever(
             search_type="similarity",
             search_kwargs={"k": 3}
         )"""
 
-        return self.vector_store
+        return db
 
     def retriever(self, query: str, k: int = 3):
         vector_store_retriever = self._ingest()

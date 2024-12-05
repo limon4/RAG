@@ -1,8 +1,5 @@
 from langchain_core.prompts import PromptTemplate
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import ChatOllama
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from src.code.multi_query_retriever import MultiQueryRetriever
 from src.code.retriever import Retriever
 
 
