@@ -1,10 +1,5 @@
-import os
-
-from chromadb import Embeddings
-from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_community.embeddings import FastEmbedEmbeddings
-from langchain_community.vectorstores.utils import filter_complex_metadata
+from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -26,11 +21,11 @@ class Retriever:
         self.embeddings = HuggingFaceEmbeddings(
                 model_name=self.embedding_model,
                 model_kwargs={'device': 'cpu'},
-                encode_kwargs={'normalize_embeddings': False}
+                encode_kwargs={'normalize_embeddings': True}
         )
 
 
-    def _ingest(self):
+    def retriever(self):
         """
         Realiza la ingesta del fichero indicado en la variable pdf_file_path.
 
@@ -43,32 +38,7 @@ class Retriever:
         """
         docs = PyPDFLoader(file_path=self.pdf_file_path).load()
         chunks = self.text_splitter.split_documents(docs)
-        chunks = filter_complex_metadata(chunks)
-        pdf_name = "BOE"
-        suf = self.embedding_model.split("/")[-1]
-        persist_directory = fr"C:\Users\rodri\PycharmProjects\AI\RAG\src\code\chroma_db_{pdf_name}_{suf}"
 
-        db = Chroma(
-            collection_name=f"{pdf_name}_{suf}",
-            embedding_function=self.embeddings,
-            persist_directory=r".\data",
-            collection_metadata={"hnsw:space": "cosine"}
-        )
-
-        ids = []
-        for i in range(len(chunks)):
-            ids.append(str(i))
-        db.add_documents(chunks, ids=ids)
-
-        print(db.get())
-        print(db.get(include=['embeddings', 'documents', 'metadatas']))
-        """self.retriever = vector_store.as_retriever(
-            search_type="similarity",
-            search_kwargs={"k": 3}
-        )"""
+        db = FAISS.from_documents(chunks, self.embeddings)
 
         return db
-
-    def retriever(self, query: str, k: int = 3):
-        vector_store_retriever = self._ingest()
-        return vector_store_retriever.similarity_search_with_relevance_scores(query, k)

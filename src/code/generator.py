@@ -1,6 +1,6 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_ollama import ChatOllama
-from src.code.retriever import Retriever
+from retriever import Retriever
 
 
 class RAG:
@@ -35,7 +35,8 @@ class RAG:
         :return: Devuelve la respuesta generada por el modelo
         """
         retriever = Retriever(self.pdf_file_path, self.embedding_model)
-        contexts = retriever.retriever(query)
+        vector_db = retriever.retriever()
+        contexts = vector_db.similarity_search_with_relevance_scores(query, 3)
 
         contexts_text = "\n\n".join([context[0].page_content for context in contexts])
         prompt = self.prompt_template.format(context=contexts_text, question=query)
