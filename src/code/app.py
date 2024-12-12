@@ -60,7 +60,7 @@ for row in rows:
         respuesta_rag, contexto_rag = rag.ask(pregunta, expanded)
     else:
         model = ChatOllama(model=llm_model)
-        respuesta_rag = model.invoke(pregunta)
+        respuesta_rag = model.invoke(pregunta).content
         contexto_rag = []
 
     rag_dataset.append(
