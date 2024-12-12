@@ -6,12 +6,19 @@ class MultiQueryRetriever:
 
     def __init__(self, vector_store):
 
-        self.vector_store = vector_store
+        self.vector_db = vector_store
+        self.docs = []
         self.results = []
 
-    def add_documents(self, document: Document):
-        if document not in self.results:
+    def _add_documents(self, document: tuple[Document, float]):
+        if document[0] not in self.docs:
+            self.docs.append(document[0])
             self.results.append(document)
+        else:
+            index = self.docs.index(document[0])
+            if self.results[index][1] < document[1]:
+                self.results[index] = document
+
 
     def run(self, query):
         """
@@ -31,7 +38,7 @@ class MultiQueryRetriever:
         cursor = conexion_bd.cursor()
         cursor.execute("SELECT pregunta "
                        "FROM preguntas_extend "
-                       "WHERE pregunta_id = (SELECT id FROM preguntas WHERE pregunta = %s);",
+                       "WHERE pregunta_id = (SELECT id FROM preguntas WHERE pregunta = %s LIMIT 1);",
                        (query,))
         rows = cursor.fetchall()
         conexion_bd.close()
@@ -41,8 +48,8 @@ class MultiQueryRetriever:
                 queries.append(row[0])
 
         for q in queries:
-            result = self.retriever_fun(q, 3)
+            result = self.vector_db.similarity_search_with_relevance_scores(q, 3)
             for doc in result:
-                self.add_documents(doc)
-        self.results.sort(key=lambda x: x.metadata['score'], reverse=True)
-        return {"documents": self.results}
+                self._add_documents(doc)
+        self.results.sort(key=lambda x: x[1], reverse=True)
+        return self.results
