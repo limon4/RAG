@@ -1,4 +1,6 @@
-import psycopg2
+import os
+
+import pandas as pd
 from langchain_core.documents import Document
 
 
@@ -28,27 +30,19 @@ class MultiQueryRetriever:
         """
         queries = [query]
 
-        conexion_bd = psycopg2.connect(
-            database='rag',
-            user='postgres',
-            password='65ar99FA',
-            host='localhost',
-            port=1577
+        prev_directory = os.path.dirname(os.getcwd())
+        expanded_questions_dataset = pd.read_csv(
+            fr"{prev_directory}\resources\expanded_questions.csv",
+            usecols=['original', 'expandida']
         )
-        cursor = conexion_bd.cursor()
-        cursor.execute("SELECT pregunta "
-                       "FROM preguntas_extend "
-                       "WHERE pregunta_id = (SELECT id FROM preguntas WHERE pregunta = %s LIMIT 1);",
-                       (query,))
-        rows = cursor.fetchall()
-        conexion_bd.close()
 
-        if len(rows) != 0:
-            for row in rows:
-                queries.append(row[0])
+        for i in range(len(expanded_questions_dataset)):
+            aux = expanded_questions_dataset.iloc[i]
+            if aux['original'] == query:
+                queries.append(aux['expandida'])
 
         for q in queries:
-            result = self.vector_db.similarity_search_with_relevance_scores(q, 3)
+            result = self.vector_db.similarity_search_with_relevance_scores(q, 3, score_threshold=0.5)
             for doc in result:
                 self._add_documents(doc)
         self.results.sort(key=lambda x: x[1], reverse=True)

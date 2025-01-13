@@ -1,83 +1,104 @@
-from datasets import Dataset
-from evaluate import load
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_ollama import ChatOllama
-from ragas import evaluate
-from ragas.metrics import context_precision, faithfulness, answer_relevancy, context_recall
-import pandas as pd
-
-def eval_llm(llm_model: str, embedding_model: str | None, expanded: bool = False):
-    references = []
-    predictions = []
-    if embedding_model is None:
-        answer_dataset = pd.read_csv(
-            fr".\qa_dataset\{llm_model}.csv",
-            usecols=['answer', 'ground_truths']
-        )
-    elif expanded:
-        answer_dataset = pd.read_csv(
-            fr".\expanded_qa_ragas_dataset_{llm_model}_{embedding_model}.csv",
-            usecols=['answer', 'ground_truths']
-        )
-    else:
-        answer_dataset = pd.read_csv(
-            fr".\qa_ragas_dataset_{llm_model}_{embedding_model}.csv",
-            usecols=['answer', 'ground_truths']
-        )
-
-    for i in range(len(answer_dataset)):
-        answer = answer_dataset.iloc[i]['answer']
-        predictions.append(answer)
-        ground_truth = answer_dataset.iloc[i]['ground_truths']
-        references.append(ground_truth)
-
-    bertscore = load("bertscore")
-    results = bertscore.compute(predictions=predictions, references=references, model_type="distilbert-base-uncased")
-    avg_precision = 0
-    for num in results['precision']:
-        avg_precision += num
-    avg_precision /= 149
-    avg_recall = 0
-    for num in results['recall']:
-        avg_recall += num
-    avg_recall /= 149
-    avg_f1 = 0
-    for num in results['f1']:
-        avg_f1 += num
-    avg_f1 /= 149
-
-    data = {
-        "llm": llm_model,
-        "embedding_model": embedding_model,
-        "Precision": avg_precision,
-        "Recall": avg_recall,
-        "F1": avg_f1
-    }
-    df = pd.DataFrame(data)
-    eval_df = Dataset.from_pandas(df)
-    if embedding_model is None:
-        eval_df.to_csv(fr"evaluation\{llm_model}.csv")
-    elif expanded:
-        eval_df.to_csv(fr"evaluation\expanded_{llm_model}_{embedding_model}.csv")
-    else:
-        eval_df.to_csv(fr"evaluation\{llm_model}_{embedding_model}.csv")
+import re
+import unicodedata
+from rouge_score import rouge_scorer
+from sentence_transformers import CrossEncoder
+from transformers import BertTokenizer, BertModel
+import numpy as np
 
 
-def eval_rag(rag_eval_dataset, llm_model, embedding_model):
-    result = evaluate(
-        rag_eval_dataset,
-        metrics=[
-            context_precision,
-            faithfulness,
-            answer_relevancy,
-            context_recall,
-        ],
-        llm=ChatOllama(model=llm_model),
-        embeddings=HuggingFaceEmbeddings(
-            model_name=embedding_model,
-            model_kwargs={'device': 'cpu'},
-            encode_kwargs={'normalize_embeddings': True}
-        )
-    )
-    dataset = Dataset.from_pandas(result.to_pandas())
-    dataset.to_csv(f"results_{llm_model}_{embedding_model}.csv")
+def _normalize_text(text:str):
+    #elimina saltos de linea y espacios adicionales
+    normalized = text.replace("\n", " ").strip()
+    #normaliza el texto para separar los caracteres base de los acentos
+    normalized = unicodedata.normalize('NFKD', normalized)
+    #filtra solo los caracteres que no son marcas de acento
+    normalized = ''.join(c for c in normalized if not unicodedata.combining(c))
+    #reemplaza multiples espacios por uno solo
+    normalized = re.sub(r'\s+', ' ', normalized)
+
+    return normalized
+
+
+class Evaluator:
+
+    def __init__(self, generated_answer: str, ground_truth: str):
+        """
+        :param generated_answer: Respuesta generada por el modelo generativo.
+        :param ground_truth: Respuesta referencia.
+        """
+
+        self.generated_answer = generated_answer
+        self.ground_truth = ground_truth
+
+    def eval_answer(self):
+        """
+        :return: dict con los mean_score para las métricas ROUGE-1, ROUGE-2, ROUGE-L, F1-score, SAS y BERTScore
+        """
+        def rouge():
+            """
+           :return: Score obtenido para Rouge-1, Rouge-2 y Rouge-L
+           """
+            scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
+            scores = scorer.score(self.ground_truth, self.generated_answer)
+            return scores
+
+        def f1_score():
+            """
+           :return: Un valor en el intervalo [0,1] que indica el f1 score de cada pregunta
+           """
+            pred_tokens = _normalize_text(self.generated_answer).split()
+            truth_tokens = _normalize_text(self.ground_truth).split()
+
+            if len(pred_tokens) == 0 or len(truth_tokens) == 0:
+                return int(pred_tokens == truth_tokens)
+
+            common_tokens = set(pred_tokens) & set(truth_tokens)
+
+            if len(common_tokens) == 0:
+                return 0
+
+            prec = len(common_tokens) / len(pred_tokens)
+            rec = len(common_tokens) / len(truth_tokens)
+            return 2 * (prec * rec) / (prec + rec)
+
+        def sas():
+            """
+            :return: Score obtenido para Semantic Answer Similarity
+            El modelo utilizado para el cálculo de esta métrica es cross-encoder/stsb-roberta-large
+            """
+            model = CrossEncoder('cross-encoder/stsb-roberta-large')
+            scores = model.predict([[self.generated_answer, self.ground_truth]])
+            return scores[0]
+
+        def bert_score():
+            """
+            :return: Score obtenido para BERTScore
+            El modelo utilizado para el cálculo de esta métrica es bert-base-uncased
+            """
+            tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+            model = BertModel.from_pretrained("bert-base-uncased")
+
+            #calculo de los tokens
+            inputs1 = tokenizer(self.generated_answer, return_tensors="pt", padding=True, truncation=True)
+            inputs2 = tokenizer(self.ground_truth, return_tensors="pt", padding=True, truncation=True)
+            outputs1 = model(**inputs1)
+            outputs2 = model(**inputs2)
+
+            #calculo de los embeddings
+            embeddings1 = outputs1.last_hidden_state.mean(dim=1).detach().numpy()
+            embeddings2 = outputs2.last_hidden_state.mean(dim=1).detach().numpy()
+
+            #calculo de cosine similarity entre los embeddings obtenidos
+            similarity = np.dot(embeddings1, embeddings2.T) / (np.linalg.norm(embeddings1) * np.linalg.norm(embeddings2))
+            return similarity[0][0]
+
+        rouges = rouge()
+        score = {
+            "rouge1": round(rouges['rouge1'].fmeasure, 2),
+            "rouge2": round(rouges['rouge2'].fmeasure, 2),
+            "rougeL": round(rouges['rougeL'].fmeasure, 2),
+            "f1": round(f1_score(), 2),
+            "sas": sas(),
+            "bertscore": round(bert_score(), 2)
+        }
+        return score

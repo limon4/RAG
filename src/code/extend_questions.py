@@ -1,34 +1,44 @@
-import psycopg2
+import ast
+import os
+import pandas as pd
 
-conexion_bd = psycopg2.connect(
-    database='rag',
-    user='postgres',
-    password='65ar99FA',
-    host='localhost',
-    port=1577
+prev_directory = os.path.dirname(os.getcwd())
+synonyms_list = pd.read_csv(
+    fr"{prev_directory}\resources\synonyms_list.csv",
+    usecols=['palabra', 'sinonimos', 'pregunta_id']
 )
-cursor = conexion_bd.cursor()
 
-cursor.execute("SELECT DISTINCT palabra, sinonimos, pregunta_id FROM sinonimos WHERE pregunta_id != '{}';")
-rows = cursor.fetchall()
-for row in rows:
-    palabra = row[0]
-    sinonimos_id = row[1]
-    cursor.execute("SELECT palabra FROM sinonimos WHERE sinonimos = %s AND palabra != %s;",
-                   (sinonimos_id, palabra))
-    sinonimos = cursor.fetchall()
-    pregunta_id = row[2]
-    for question_id in pregunta_id:
-        cursor.execute("SELECT pregunta, golden_answer, reference FROM preguntas WHERE id = %s;",
-                       (question_id,))
-        response = cursor.fetchall()[0]
-        pregunta = response[0]
-        golden_answer = response[1]
-        reference = response[2]
-        for sinonimo in sinonimos:
-            aux = pregunta.replace(palabra, sinonimo[0])
-            cursor.execute("INSERT INTO preguntas_extend (pregunta_id, pregunta, golden_answer, reference) VALUES (%s, %s, %s, %s);",
-                           (question_id, aux, golden_answer, reference))
+question_dataset = pd.read_csv(
+    fr"{prev_directory}\resources\Cuatrecasas-OEG-Spanish Workers Statute Eval Dataset.xlsx - 1st set.csv",
+    usecols=['Question Spanish', 'Answer Spanish (highlight paragraph)\nBLACK BOLD']
+)
 
-conexion_bd.commit()
-conexion_bd.close()
+questions_expanded = []
+for i in range(len(synonyms_list)):
+    aux = synonyms_list.iloc[i]
+    if aux['pregunta_id'] != '[]':
+        word = aux['palabra']
+        synonyms_id = aux['sinonimos']
+        questions = ast.literal_eval(synonyms_list.iloc[i]['pregunta_id'])
+        j = i
+        while j != 0 and synonyms_list.iloc[j-1]['sinonimos'] == synonyms_id:
+            j -= 1
+        while synonyms_list.iloc[j]['sinonimos'] == synonyms_id:
+            if j != i:
+                synonym = synonyms_list.iloc[j]['palabra']
+                for question_id in questions:
+                    question = question_dataset.iloc[question_id]['Question Spanish'].lower()
+                    question_expanded = question.replace(word, synonym)
+                    ground_truth = question_dataset.iloc[question_id]['Answer Spanish (highlight paragraph)\nBLACK BOLD']
+                    expanded = {
+                        "id_original": question_id,
+                        "original": question,
+                        "expandida": question_expanded,
+                        "ground_truth": ground_truth
+                    }
+                    questions_expanded.append(expanded)
+            j += 1
+
+df = pd.DataFrame(questions_expanded)
+csv_path = fr"{prev_directory}\resources\expanded_questions.csv"
+df.to_csv(csv_path)

@@ -1,24 +1,21 @@
 import json
+import os
 
-import psycopg2
+import pandas as pd
 
-with open(r'C:\Users\rodri\PycharmProjects\AI\RAG\src\resources\labourlawterminologyv2.jsonld', encoding='utf-8') as file:
+prev_directory = os.path.dirname(os.getcwd())
+
+with open(rf'{prev_directory}\resources\labourlawterminologyv2.jsonld', encoding='utf-8') as file:
     data = json.load(file)
 
-conexion_bd = psycopg2.connect(
-    database='rag',
-    user='postgres',
-    password='65ar99FA',
-    host='localhost',
-    port=1577
-)
-cursor = conexion_bd.cursor()
+synonyms_list =[]
 
-word = ''
-synonyms = []
 i = 0
 aux = data[0]['@graph']
+#se recorre el json en busca de las palabras y sus términos relacionados en español
 for elements in aux:
+    word = ''
+    synonyms = []
     keys = elements.keys()
     for key in keys:
         if key.endswith('prefLabel'):
@@ -30,28 +27,36 @@ for elements in aux:
                 if terms['@language'] == 'es':
                     synonyms.append(terms['@value'])
 
+    #si hay una palabra con sinónimos en español se almacena en un fichero csv
     if word != '' and len(synonyms) != 0:
+        question_dataset = pd.read_csv(
+            fr"{prev_directory}\resources\Cuatrecasas-OEG-Spanish Workers Statute Eval Dataset.xlsx - 1st set.csv",
+            usecols=['Question Spanish', 'Answer Spanish (highlight paragraph)\nBLACK BOLD', 'Paragraph Spanish']
+        )
         questions = []
-        cursor.execute("SELECT id FROM preguntas WHERE pregunta LIKE %s;",
-                       (('% ' + word + ' %'),))
-        q_word = cursor.fetchall()
-        for q in q_word:
-            questions.append(q)
-        cursor.execute("INSERT INTO sinonimos (palabra, sinonimos, pregunta_id) VALUES (%s, %s, %s);",
-                       (word, i, questions))
-        questions.clear()
-        for synonym in synonyms:
-            cursor.execute("SELECT id FROM preguntas WHERE pregunta LIKE %s;",
-                           (('% ' + synonym + ' %'),))
-            q_synonym = cursor.fetchall()
-            for q in q_synonym:
-                questions.append(q)
-            cursor.execute("INSERT INTO sinonimos (palabra, sinonimos, pregunta_id) VALUES (%s, %s, %s);",
-                           (synonym, i, questions))
-            questions.clear()
-        i += 1
-        word = ''
-        synonyms.clear()
+        synonyms.append(word)
+        index_per_word = {synonym: [] for synonym in synonyms}
+        for j in range(len(question_dataset)):
+            question = question_dataset.iloc[j]['Question Spanish'].lower()
+            found_word = None
+            for synonym in synonyms:
+                if (len(synonym.split()) > 1 and synonym.lower() in question) or (synonym.lower() in question.lower().split()):
+                    if found_word is None or found_word in synonym:
+                        found_word = synonym
 
-conexion_bd.commit()
-conexion_bd.close()
+            if found_word:
+                index_per_word[found_word].append(j)
+
+        for synonym, index in index_per_word.items():
+            result_word = {
+                "palabra": synonym,
+                "sinonimos": i,
+                "pregunta_id": index
+            }
+            synonyms_list.append(result_word)
+        i+=1
+
+
+df = pd.DataFrame(synonyms_list)
+csv_path = fr"{prev_directory}\resources\synonyms_list.csv"
+df.to_csv(csv_path)

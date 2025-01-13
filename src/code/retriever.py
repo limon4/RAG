@@ -7,6 +7,10 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 class Retriever:
 
     def __init__(self, pdf_file_path: str, embedding_model: str | None):
+        """
+        :param pdf_file_path: Ruta en la que se encuentra el fichero a leer.
+        :param embedding_model: Modelo de embeddings que se desea emplear.
+        """
 
         self.pdf_file_path = pdf_file_path
         self.embedding_model = embedding_model
@@ -17,7 +21,6 @@ class Retriever:
         )
 
         #inicializamos el modelo para el cálculo de embeddings
-        #self.embeddings = FastEmbedEmbeddings()
         self.embeddings = HuggingFaceEmbeddings(
                 model_name=self.embedding_model,
                 model_kwargs={'device': 'cpu'},
@@ -27,14 +30,12 @@ class Retriever:
 
     def retriever(self):
         """
-        Realiza la ingesta del fichero indicado en la variable pdf_file_path.
-
         El proceso llevado a cabo es el siguiente:
             1. Se obtiene el texto obtenido de la ruta pdf_file_path.
             2. El texto se divide en chunks según lo especificado en la variable text_splitter.
-            3. Se calcula el embedding de los chunks en caso de que no se haya calculado previamente.
+            3. Se calcula el embedding de los chunks.
             4. Los vectores calculados se almacenan en una base de datos vectorial.
-        :return: Se devuelve el recuperador asociado a la base de datos
+        :return: Se devuelve la base de datos en la que se almacenan los vectores
         """
         docs = PyPDFLoader(file_path=self.pdf_file_path).load()
         chunks = self.text_splitter.split_documents(docs)
