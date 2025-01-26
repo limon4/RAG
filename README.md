@@ -1,3 +1,3 @@
-# RAG implementation using Llama models and Hugging Face Embeddings
+# RAG implementation using Ollama models and Hugging Face Embeddings
 
 
