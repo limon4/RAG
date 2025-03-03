@@ -21,7 +21,8 @@ class QueryExpander:
       en el diccionario de sinónimos
       """
       preprocessed_query = (query.replace(',', ' , ').replace('¿', '¿ ')
-                            .replace('?', ' ?').replace('.', ' . '))
+                            .replace('?', ' ?').replace('.', ' . ').replace('(', ' ( ')
+                            .replace(')', ' ) '))
       words = preprocessed_query.lower().split()
       words_found = []
       found = False
