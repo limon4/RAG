@@ -1,6 +1,6 @@
-import ast
 import os
 import pandas as pd
+import ast
 
 from src.code.query_expander import QueryExpander
 
@@ -22,10 +22,10 @@ for i in range(len(synonyms_csv)):
     synonyms_list[aux['palabra']] = ast.literal_eval(aux['sinonimos'])
 
 query_expander = QueryExpander(synonyms_list)
-for i in range(len(question_dataset)):
+for i in [0,1]:
     aux = question_dataset.iloc[i]
     original = aux['Question Spanish']
     ground_truth = aux['Answer Spanish (highlight paragraph)\nBLACK BOLD']
-    query_expander.query_expansion(original)
-
-print(synonyms_list)
+    combinations = query_expander.query_expansion(original)
+    for expanded in combinations:
+        print(' '.join(expanded))
