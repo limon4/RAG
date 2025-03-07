@@ -1,3 +1,4 @@
+import subprocess
 from datetime import datetime
 import os
 import pandas as pd
@@ -5,7 +6,7 @@ from generator import RAG
 
 prev_directory = os.path.dirname(os.getcwd())
 question_dataset_path=rf"{prev_directory}\resources\Cuatrecasas-OEG-Spanish Workers Statute Eval Dataset.xlsx - 1st set.csv"
-llms = ["mistral", "llama3.2", "granite3-dense"]
+llms = ["mistral"]
 embeddings = ["PlanTL-GOB-ES/roberta-base-bne", "PlanTL-GOB-ES/RoBERTalex"]
 
 #se carga el dataset de preguntas para realizar la evaluación
@@ -18,7 +19,7 @@ for llm in llms:
     for embedding in embeddings:
         print("Ha comenzado la ejecución del sistema con llm: ", llm, " y embedding: ", embedding)
         print("Time: ", datetime.now().time())
-        for i in range(3): #indica los diferentes modos. 0 es sin RAG, 1 es con RAG y 2 es con RAG y expansion
+        for i in [2]: #indica los diferentes modos. 0 es sin RAG, 1 es con RAG y 2 es con RAG y expansion
 
             # creamos nuestro RAG dataset para realizar la evaluación
             rag_dataset = []
@@ -62,3 +63,5 @@ for llm in llms:
             df.to_csv(path_csv)
             print("Ha finalizado la ejecución del sistema con llm: ", llm, " y embedding: ", embedding)
             print("Time: ", datetime.now().time())
+
+subprocess.run("shutdown -s")

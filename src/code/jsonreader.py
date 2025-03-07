@@ -17,7 +17,7 @@ aux = data[0]['@graph']
 for elements in aux:
     word = ''
     synonyms = []
-    lt = ''
+    lt = []
     keys = elements.keys()
     for key in keys:
         if key.endswith('prefLabel'):
@@ -29,10 +29,14 @@ for elements in aux:
                 if terms['@language'] == 'es':
                     synonyms.append(terms['@value'].lower())
         if key.endswith('broader'):
-            lt = elements[key][0]['@id']
+            for broaders in elements[key]:
+                lt.append(broaders)
 
     #si hay una palabra con sinónimos en español se almacena en un fichero csv
-    if word != '' and len(synonyms) != 0:
+    if word != '' or len(synonyms) != 0:
+        if len(synonyms) != 0 and word == '':
+            word = synonyms[0]
+            del synonyms[0]
         result_word = {
             "palabra": word,
             "sinonimos": synonyms,
@@ -40,25 +44,24 @@ for elements in aux:
         }
         synonyms_list.append(result_word)
         broader_dict[elements['@id']] = [word] + synonyms
-    elif word != '':
-        broader_dict[elements['@id']] = [word]
-    elif len(synonyms) != 0:
-        broader_dict[elements['@id']] = synonyms
-
 
 df = pd.DataFrame(synonyms_list)
 synonyms_list.clear()
 for i in range(len(df)):
     aux = df.iloc[i]
+    word = aux['palabra']
     new_synonyms = aux['sinonimos']
-    if aux['broader'] != '':
-        word_list = broader_dict[aux['broader']]
-        new_synonyms += word_list
-    sol = {
-        "palabra": aux['palabra'],
-        "sinonimos": new_synonyms
-    }
-    synonyms_list.append(sol)
+    if len(aux['broader']) != 0:
+        for broader in aux['broader']:
+            #si el broader asociado tiene términos en español los añadimos a sinónimos
+            if broader['@id'] in broader_dict.keys():
+                new_synonyms += broader_dict[broader['@id']]
+    if len(new_synonyms) != 0:
+        sol = {
+            "palabra": word,
+            "sinonimos": new_synonyms
+        }
+        synonyms_list.append(sol)
 df2 = pd.DataFrame(synonyms_list)
 csv_path = fr"{prev_directory}/resources/synonyms_list.csv"
 df2.to_csv(csv_path)

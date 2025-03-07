@@ -1,10 +1,11 @@
 import os
+import subprocess
 from datetime import datetime
 
 import pandas as pd
 from src.code.evaluator import Evaluator
 
-llms = ["llama3.2", "mistral", "granite3-dense"]
+llms = ["llama3.2", "mistral"]
 embeddings = ["roberta-base-bne", "robertalex"]
 
 current_directory = os.getcwd()
@@ -14,7 +15,7 @@ for llm in llms:
     for embedding in embeddings:
         print("Ha comenzado la evaluación del sistema con llm: ", llm, " y embedding: ", embedding)
         print("Time: ", datetime.now().time())
-        for i in range(3): #indica los diferentes modos. 0 es sin RAG, 1 es con RAG y 2 es con RAG y expansion
+        for i in [2]: #indica los diferentes modos. 0 es sin RAG, 1 es con RAG y 2 es con RAG y expansion
             if i == 0:
                 answer_dataset = pd.read_csv(
                     fr"{prev_directory}\answers\no_rag\{llm}.csv",
@@ -48,3 +49,5 @@ for llm in llms:
 
             response_df = pd.DataFrame(response)
             response_df.to_csv(path_csv, mode='a', header=not os.path.isfile(path_csv))
+
+subprocess.run("shutdown -s")
