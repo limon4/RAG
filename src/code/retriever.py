@@ -23,7 +23,7 @@ class Retriever:
         #inicializamos el modelo para el cálculo de embeddings
         self.embeddings = HuggingFaceEmbeddings(
                 model_name=self.embedding_model,
-                model_kwargs={'device': 'cpu'},
+                model_kwargs={'device': 'cpu', 'use_auth_token': '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'},
                 encode_kwargs={'normalize_embeddings': True}
         )
 

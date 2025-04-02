@@ -1,7 +1,9 @@
 import os
 
 import pandas as pd
+import torch.cuda
 from langchain_core.documents import Document
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 
 class MultiQueryRetriever:
@@ -11,16 +13,30 @@ class MultiQueryRetriever:
         self.vector_db = vector_store
         self.docs = []
         self.results = []
+        self.reranker_model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.reranker_tokenizer = AutoTokenizer.from_pretrained(self.reranker_model_name, token='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')
+        self.reranker_model = AutoModelForSequenceClassification.from_pretrained(self.reranker_model_name, token='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')
+        self.reranker_model.to(self.device)
 
     def _add_documents(self, document: tuple[Document, float]):
-        if document[0] not in self.docs:
             self.docs.append(document[0])
             self.results.append(document)
-        else:
-            index = self.docs.index(document[0])
-            if self.results[index][1] < document[1]:
-                self.results[index] = document
 
+    def _rerank_documents(self, query: str, documents: list[Document], top_k: int = 5):
+        pairs = []
+
+        for doc in documents:
+            pairs.append((query, doc.page_content))
+
+        features = self.reranker_tokenizer(pairs, padding=True, truncation=True, return_tensors="pt", max_length=512).to(self.device)
+        with torch.no_grad():
+            scores = self.reranker_model(**features).logits.squeeze().cpu().numpy()
+
+        doc_score_pairs = list(zip(documents, scores))
+        ranked_docs = sorted(doc_score_pairs, key=lambda x: x[1], reverse=True)
+
+        return ranked_docs[:top_k]
 
     def run(self, query):
         """
@@ -42,8 +58,9 @@ class MultiQueryRetriever:
                 queries.append(aux['expandida'])
 
         for q in queries:
-            result = self.vector_db.similarity_search_with_relevance_scores(q, 3, score_threshold=0.5)
+            result = self.vector_db.similarity_search_with_relevance_scores(q, 3)
             for doc in result:
                 self._add_documents(doc)
-        self.results.sort(key=lambda x: x[1], reverse=True)
+
+        self.results = self._rerank_documents(query, self.docs, 3)
         return self.results

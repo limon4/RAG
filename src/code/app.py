@@ -6,7 +6,7 @@ from generator import RAG
 
 prev_directory = os.path.dirname(os.getcwd())
 question_dataset_path=rf"{prev_directory}\resources\Cuatrecasas-OEG-Spanish Workers Statute Eval Dataset.xlsx - 1st set.csv"
-llms = ["mistral"]
+llms = ["llama3.2", "mistral"]
 embeddings = ["PlanTL-GOB-ES/roberta-base-bne", "PlanTL-GOB-ES/RoBERTalex"]
 
 #se carga el dataset de preguntas para realizar la evaluación
