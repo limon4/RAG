@@ -21,7 +21,7 @@ def _normalize_text(text:str):
 
 class Evaluator:
 
-    def __init__(self, generated_answer: str, ground_truth: str):
+    def __init__(self, question: str, generated_answer: str, ground_truth: str):
         """
         :param generated_answer: Respuesta generada por el modelo generativo.
         :param ground_truth: Respuesta referencia.
@@ -29,6 +29,7 @@ class Evaluator:
 
         self.generated_answer = generated_answer
         self.ground_truth = ground_truth
+        self.question = question
 
     def eval_answer(self):
         """
@@ -94,6 +95,9 @@ class Evaluator:
 
         rouges = rouge()
         score = {
+            "question": self.question,
+            "ground_truth": self.ground_truth,
+            "answer": self.generated_answer,
             "rouge1": round(rouges['rouge1'].fmeasure, 2),
             "rouge2": round(rouges['rouge2'].fmeasure, 2),
             "rougeL": round(rouges['rougeL'].fmeasure, 2),

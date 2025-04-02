@@ -1,5 +1,4 @@
 import os
-import subprocess
 from datetime import datetime
 
 import pandas as pd
@@ -43,11 +42,9 @@ for llm in llms:
                 question = answer_dataset.iloc[j]['question']
                 answer = answer_dataset.iloc[j]['answer']
                 ground_truth = answer_dataset.iloc[j]['ground_truth']
-                evaluator = Evaluator(answer, ground_truth)
+                evaluator = Evaluator(question, answer, ground_truth)
                 scores = evaluator.eval_answer()
                 response.append(scores)
 
             response_df = pd.DataFrame(response)
-            response_df.to_csv(path_csv, mode='a', header=not os.path.isfile(path_csv))
-
-subprocess.run("shutdown -s")
+            response_df.to_csv(path_csv)
