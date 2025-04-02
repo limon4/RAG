@@ -32,13 +32,13 @@ class MultiQueryRetriever:
 
         prev_directory = os.path.dirname(os.getcwd())
         expanded_questions_dataset = pd.read_csv(
-            fr"{prev_directory}\resources\expanded_questions.csv",
+            fr"{prev_directory}\resources\expanded_questions_aux.csv",
             usecols=['original', 'expandida']
         )
 
         for i in range(len(expanded_questions_dataset)):
             aux = expanded_questions_dataset.iloc[i]
-            if aux['original'] == query:
+            if aux['original'] == query and aux['expandida'] not in queries:
                 queries.append(aux['expandida'])
 
         for q in queries:

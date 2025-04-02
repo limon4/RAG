@@ -1,1112 +1,528 @@
-,palabra,sinonimos,pregunta_id
-0,propuesta de modificación,0,[]
-1,modificacion,0,[]
-2,mod,0,[]
-3,modificación,0,[89]
-4,adopcion,1,[]
-5,filiación adoptiva,1,[]
-6,adopción,1,[]
-7,gastos de viaje,2,[]
-8,dietas y gastos,2,[]
-9,trabajo a media jornada,3,[]
-10,día laborable,3,[]
-11,jornada,3,"[76, 77, 100]"
-12,certificado de depósito,4,[]
-13,pagare,4,[]
-14,pagaré,4,[]
-15,organismo público de España,5,[]
-16,organismo público,5,[]
-17,organismo publico,5,[]
-18,organismo público (España),5,[]
-19,institución pública,5,[]
-20,sociedad,6,[]
-21,unión,6,[]
-22,corporación,6,[]
-23,cooperativa,6,[]
-24,asociación,6,[]
-25,período de prácticas,7,[]
-26,período de prueba,7,[]
-27,coste de los daños medioambientales,8,[]
-28,Vertidos toxicos,8,[]
-29,Contaminante,8,[]
-30,La contaminacion,8,[]
-31,Contaminado,8,[]
-32,La contaminación,8,[]
-33,Emision contaminante,8,[]
-34,Contaminacion ambiental,8,[]
-35,Contaminada,8,[]
-36,Contaminar,8,[]
-37,Contaminacion,8,[]
-38,Polucion,8,[]
-39,Contaminación ambiental,8,[]
-40,Vertidos tóxicos,8,[]
-41,Polución,8,[]
-42,Emisión contaminante,8,[]
-43,contaminación,8,[]
-44,actuario,9,[]
-45,secretario judicial,9,[]
-46,organización de consumidores,10,[]
-47,movimiento de consumidores,10,[]
-48,salvaguardia del patrimonio cultural,11,[]
-49,patrimonio,11,[]
-50,SMI,12,[]
-51,salario mínimo interprofesional,12,[71]
-52,indicador de rendimiento clave,13,[]
-53,derechos de los pasajeros de tren,13,[]
-54,derechos de los pasajeros,13,[]
-55,sistema jurisdiccional,14,[]
-56,competencia judicial,14,[]
-57,jurisdicción,14,[]
-58,revitalización urbana,15,[]
-59,renovación urbana,15,[]
-60,extranjeros,16,[]
-61,extranjera,16,[]
-62,extranjero,16,[]
-63,jornada de trabajo,17,"[76, 77, 100]"
-64,día laborable,17,[]
-65,jornada laboral,17,[]
-66,jornada,17,[]
-67,eficacia en función de los costes,18,[]
-68,análisis de coste-eficacia,18,[]
-69,criterio de calidad,19,[]
-70,calidad del producto,19,[]
-71,jornada laboral,20,[]
-72,jornada de trabajo,20,"[76, 77, 100]"
-73,Sociedad conyugal,21,[]
-74,comunidad de bienes,21,[]
-75,entidad de derecho público,22,[]
-76,organismo de Derecho público,22,[]
-77,organismo publico,22,[]
-78,organismo público de España,22,[]
-79,organismo público (España),22,[]
-80,organismo público,22,[]
-81,productividad biológica,23,[]
-82,productividad,23,[]
-83,repatriado,24,[]
-84,reunificación familiar,24,[]
-85,migratorio,24,[]
-86,migraciones,24,[]
-87,migración interna,24,[]
-88,tasa de migración,24,[]
-89,migración elegida,24,[]
-90,nuevo asentamiento,24,[]
-91,estadísticas de asilo,24,[]
-92,migración estacional,24,[]
-93,migración de trabajo,24,[]
-94,migratoria,24,[]
-95,migración clandestina,24,[]
-96,emigra,24,[]
-97,migrante comunitario,24,[]
-98,migracion,24,[]
-99,mujer migrante,24,[]
-100,éxodo rural,24,[]
-101,trayecto domicilio-trabajo,24,[]
-102,migración,24,[]
-103,derecho de recurso,25,[]
-104,derecho de litigar,25,[]
-105,empleo,26,[]
-106,trabajo,26,"[24, 38, 46, 77, 79, 81, 84, 87, 88, 102, 109, 143]"
-107,política gubernamental,27,[]
-108,políticas públicas,27,[]
-109,política pública,27,[]
-110,incapacidad civil,28,[]
-111,incapacidad contractual,28,[]
-112,incapacidad,28,[]
-113,servidor público,29,[]
-114,cargo público,29,[]
-115,funcionario publico,29,[]
-116,funcionario público,29,[]
-117,permiso por maternidad,30,[]
-118,permiso de maternidad,30,[]
-119,acuerdo colectivo,31,[]
-120,convenio colectivo,31,"[133, 136, 137, 139, 140, 141, 142]"
-121,ubicación del organismo público,32,[]
-122,administración,32,[]
-123,administración digital,33,[]
-124,administración electrónica,33,[]
-125,acoso moral en el trabajo,34,[]
-126,hostigamiento laboral,34,[]
-127,violencia psicológica en el trabajo,34,[]
-128,mobbing,34,[]
-129,acoso laboral,34,[]
-130,vía ejecutiva,35,[]
-131,sentencia judicial,35,[]
-132,juicio,35,[]
-133,sentencia,35,[]
-134,protección social,36,[]
-135,seguro social,36,[]
-136,sistema de previsión social,36,[]
-137,previsión social,36,[]
-138,seguridad social,36,"[70, 90]"
-139,trabajo en días no laborables,37,[]
-140,trabajo dominical,37,[]
-141,programa de acción,38,[]
-142,acción,38,[]
-143,publicidad engañosa,39,[]
-144,publicidad falsa,39,[]
-145,publicidad abusiva,39,[]
-146,Riesgos,40,[57]
-147,Arriesgado,40,[]
-148,riesgo,40,[]
-149,viaje por motivos de salud,41,[]
-150,turismo ético,41,[]
-151,turismo náutico,41,[]
-152,turismo de congresos,41,[]
-153,vacaciones en el campo,41,[]
-154,turismo respetuoso del medio ambiente,41,[]
-155,peregrinaje,41,[]
-156,turismo,41,[]
-157,perjudicado,42,[]
-158,parte perjudicada,42,[]
-159,víctima,42,[]
-160,ámbito de aplicación territorial,43,[]
-161,ámbito territorial,43,[]
-162,legislación en materia de protección de los consumidores,44,[]
-163,derecho en materia de protección de los consumidores,44,[]
-164,Derecho de los consumidores,44,[]
-165,despliegue,45,[]
-166,implementación,45,[]
-167,aplicación,45,[2]
-168,entidad legal,46,[]
-169,ente jurídico,46,[]
-170,entidad jurídica,46,[]
-171,hora extra,47,[]
-172,hora extraordinaria,47,[]
-173,reciclaje de conocimientos,48,[]
-174,especialización profesional,48,[63]
-175,extinción de la relación laboral,49,[]
-176,despido,49,"[104, 105, 106, 107, 110, 111, 112, 113, 114]"
-177,extinción del contrato,49,"[61, 102, 109]"
-178,índice de desempleo,50,[]
-179,paro,50,[]
-180,trabajador asalariado,51,[]
-181,asalariado,51,[]
-182,ubicación del organismo público,52,[]
-183,sede de la administración,52,[]
-184,coste ecológico,53,[]
-185,costes ambientales,53,[]
-186,carrera profesional,54,[]
-187,profesiones,54,[]
-188,profesion,54,[]
-189,profesión,54,[]
-190,actividad complementaria,55,[]
-191,pluriempleo,55,[]
-192,cambio de puesto,56,[]
-193,cambio de lugar de trabajo,56,[]
-194,traslado,56,[]
-195,contrato laboral,57,[108]
-196,contrato por internet,57,[]
-197,acuerdo,57,[]
-198,convenio,57,"[133, 136, 137, 139, 140, 141, 142]"
-199,contrato,57,"[19, 23, 25, 26, 27, 28, 29, 30, 31, 32, 33, 37, 39, 48, 50, 51, 52, 95, 96, 98, 99, 101, 102, 103, 109, 116]"
-200,marginación social,58,[]
-201,exclusión social,58,[]
-202,miembro del Consejo de Gobierno,59,[]
-203,trabajador por cuenta propia,59,[]
-204,conseller,59,[]
-205,ministro,59,[]
-206,consejero,59,[]
-207,ausencia,60,[]
-208,ausencia del trabajo,60,[]
-209,Administración del Estado,61,[]
-210,Gestion publica,61,[]
-211,Administración publica,61,[]
-212,Oficinas publicas,61,[]
-213,Administracion pública,61,[]
-214,Oficinas públicas,61,[]
-215,Gestión pública,61,[]
-216,Gestión publica,61,[]
-217,Gestion pública,61,[]
-218,Administraciones públicas,61,[]
-219,Administracion del Estado,61,[]
-220,Administracion publica,61,[]
-221,Administraciones publicas,61,[]
-222,administración pública,61,[]
-223,rentista,62,[]
-224,retirado,62,[]
-225,jubilado,62,[]
-226,pensionista,62,[]
-227,procurador,63,[]
-228,profesión jurídica,63,[]
-229,unidad de medida,64,[]
-230,medida,64,[]
-231,trabajo interino,65,[]
-232,contrato de interinidad,65,[]
-233,movimientos sociales,66,[]
-234,movimiento social,66,[]
-235,responsabilidad por los daños ecológicos,67,[]
-236,responsabilidad pública,67,[]
-237,responsabilidad legal,67,[]
-238,responsabilidad medioambiental de la empresa,67,[]
-239,utilización pacífica del espacio,67,[]
-240,sociedad limitada,67,[]
-241,responsabilidad del Gobierno,67,[]
-242,minoría de edad en Derecho penal,67,[]
-243,responsabilidad de la administración pública,67,[]
-244,responsabilidad por vicios ocultos,67,[]
-245,acción por daños y perjuicios,67,[]
-246,responsabilidad,67,[92]
-247,pausa,68,[]
-248,recreo,68,[]
-249,baja,68,[]
-250,ausencia,68,[]
-251,descanso,68,[82]
-252,puesto de trabajo de proceso de datos,69,[]
-253,puesto de trabajo,69,[]
-254,escrito de recurso,70,[]
-255,demanda,70,[]
-256,parque automovilístico,71,[]
-257,parque móvil,71,[]
-258,hora de trabajo,72,[]
-259,horario de trabajo,72,[]
-260,acto legal,73,[]
-261,acto jurídico de la Unión,73,[]
-262,accion legal,73,[]
-263,acción judicial,73,[]
-264,acción legal,73,[]
-265,acto jurídico,73,[]
-266,bienes fisicos y servicios intangibles,74,[]
-267,bienes físicos y servicios intangibles,74,[]
-268,bienes y servicios,74,[]
-269,teletrabajo,75,[]
-270,trabajo a distancia,75,[38]
-271,Remuneración salarial,76,[]
-272,salario-hora profesional,76,[]
-273,Salarial,76,[]
-274,tarifa de salarios,76,[]
-275,sueldo,76,[]
-276,jornal,76,[]
-277,nómina,76,[]
-278,salario móvil,76,[]
-279,honorarios,76,[]
-280,Estipendio,76,[]
-281,salario por unidad de obra,76,[]
-282,salario,76,[71]
-283,subsidio de paro,77,[]
-284,falta de trabajo,77,[]
-285,tasa de desempleo,77,[]
-286,desocupacion,77,[]
-287,desocupación,77,[]
-288,cesantia,77,[]
-289,paro forzoso,77,[]
-290,cesantía,77,[]
-291,desempleo,77,[]
-292,igualdad salarial,78,[]
-293,igualdad de salario,78,[]
-294,igualdad de remuneración por razón de sexo,78,[]
-295,técnica de aprendizaje,79,[]
-296,aprender,79,[]
-297,aprendizaje,79,[]
-298,objeto del contrato,80,[]
-299,contrato público,80,[]
-300,sobresueldo,81,[]
-301,propina,81,[]
-302,gratificación,81,[]
-303,markka,82,[]
-304,merk,82,[]
-305,marc,82,[]
-306,marka,82,[]
-307,trama,82,[]
-308,mark,82,[]
-309,marco,82,[6]
-310,contaminación alimentaria,83,[]
-311,contaminación de los alimentos,83,[]
-312,sistema de alerta rápida de la UE,84,[]
-313,sistema de alerta de la UE,84,[]
-314,representante de personal,85,[]
-315,representante sindical,85,[]
-316,delegados de personal,85,"[120, 121, 122]"
-317,Red para la solución extrajudicial de litigios de consumo,86,[]
-318,educación del consumidor,86,[]
-319,Red de Centros Europeos de los Consumidores,86,[]
-320,datos,87,[]
-321,informacion,87,[]
-322,información policial confidencial,87,[]
-323,información,87,[]
-324,convenio irregular,88,[]
-325,convenio colectivo extraestatutario,88,[]
-326,contrato colectivo extraestatutario,88,[]
-327,convenio extraestatutario,88,[]
-328,conflicto salarial,89,[]
-329,conflicto colectivo,89,[]
-330,valoración volumétrica,90,[]
-331,análisis volumétrico,90,[]
-332,valoración química,90,[]
-333,Valoracion química,90,[]
-334,valoración,90,[]
-335,volumetría,90,[]
-336,Titracion,90,[]
-337,Valoracion volumetrica,90,[]
-338,Titulacion,90,[]
-339,titración,90,[]
-340,titulación,90,[]
-341,porcentaje,91,[]
-342,renta no salarial,91,[]
-343,salario garantizado,92,[]
-344,salario mínimo,92,[]
-345,salario mínimo interprofesional,92,[71]
-346,Filosofia Politica,93,[]
-347,Filosofia Política,93,[]
-348,teoría política,93,[]
-349,filosofía política,93,[]
-350,ente del sector público,94,[]
-351,entidad del sector público,94,[]
-352,Probar con ejemplo,95,[]
-353,cobertura de riesgos de accidente,95,[]
-354,falacia dicto simpliciter,95,[]
-355,Accidente falacia,95,[]
-356,accidente,95,[]
-357,EIOPA,96,[]
-358,Autoridad Europea de Seguros y Pensiones de Jubilación,96,[]
-359,formación preprofesional,97,[]
-360,formación profesional,97,[65]
-361,administracion local,98,[]
-362,autoridad local,98,[]
-363,administración local,98,[]
-364,tutela legal,99,[]
-365,tutela,99,[]
-366,unidad empresarial,100,[]
-367,unidad de negocio,100,[]
-368,Direccion,101,[]
-369,dirección,101,"[59, 88]"
-370,rehabilitación,102,[]
-371,ejercicio de actuaciones judiciales,102,[]
-372,intervención del fiscal,102,[]
-373,acción penal,102,[]
-374,prescripción de la pena,102,[]
-375,puesta en servicio,103,[]
-376,comisión,103,"[138, 145]"
-377,delegación,104,[]
-378,comisión,104,"[138, 145]"
-379,función,104,[]
-380,cometido,104,[]
-381,voto electrónico,105,[]
-382,votación secreta,105,[]
-383,voto,105,[]
-384,voto por procuración,105,[]
-385,votación del presupuesto,105,[]
-386,papeleta de voto,105,[]
-387,última vuelta electoral,105,[]
-388,votación,105,"[127, 132]"
-389,prisión de alta seguridad,106,[]
-390,institución penitenciaria,106,[]
-391,empleado,107,[]
-392,miembro del personal,107,[]
-393,trabajador,107,"[13, 36, 43, 50, 51, 56, 60, 65, 77, 84, 87]"
-394,competencia profesional,108,[]
-395,capacidad profesional,108,[]
-396,derecho del trabajo,109,[]
-397,derecho laboral,109,[]
-398,dedicación completa,110,[]
-399,jornada completa,110,[]
-400,accidente de trabajo,111,[]
-401,accidentes del trabajo,111,[]
-402,accidentes de trabajo,111,[]
-403,accidente laboral,111,[]
-404,cláusulas del contrato,112,[]
-405,condiciones de trabajo,112,"[88, 89]"
-406,causa de la suspensión,113,[]
-407,causas y efectos de la suspensión,113,[]
-408,despido objetivo,114,[]
-409,despido justificado,114,[]
-410,extinción del contrato por causas objetivas,114,[]
-411,absentismo laboral,115,[]
-412,ausencia de puesto de trabajo,115,[]
-413,abandono del trabajo,115,[]
-414,Notario público,116,[]
-415,fedatario público,116,[]
-416,notaria,116,[]
-417,notario,116,[]
-418,scope,117,[]
-419,ámbito de una declaración,117,[]
-420,ámbito de validez,117,[]
-421,ámbito de validez de una declaración,117,[]
-422,ámbito,117,[]
-423,actividad asalariada,118,[]
-424,actividad por cuenta ajena,118,[]
-425,Pensión (hospedaje),119,[]
-426,posada secreta,119,[]
-427,casa de huéspedes,119,[]
-428,pensión,119,[]
-429,alguacil,120,[]
-430,agente judicial,120,[]
-431,norma legal,121,[]
-432,norma reglamentaria,121,[]
-433,vehiculo comercial,122,[]
-434,vehículo comercial,122,[]
-435,incapacidad jurídica,123,[]
-436,Capacidad juridica,123,[]
-437,capacidad jurídica,123,[]
-438,titular del cargo,124,[]
-439,titular del derecho,124,[]
-440,titular,124,[]
-441,management,125,[]
-442,administración,125,[]
-443,gestión,125,[]
-444,concurso-subasta,126,[]
-445,licitación,126,[]
-446,convocatoria de ofertas,126,[]
-447,concurso restringido,126,[]
-448,concurso público,126,[]
-449,subasta pública,126,[]
-450,pliego de condiciones generales,126,[]
-451,expediente de licitación,126,[]
-452,convocatoria de licitación,126,[]
-453,convocatoria,126,[131]
-454,FOGASA,127,[]
-455,fondo de garantía salarial,127,[75]
-456,defunción,128,[]
-457,muerte,128,[]
-458,fallecimiento,128,[]
-459,vínculo laboral,129,[]
-460,relación de trabajo,129,[]
-461,relación laboral,129,[7]
-462,rectificación,130,[]
-463,corrección,130,[]
-464,enmienda,130,[]
-465,modificación,130,[89]
-466,reforma,130,[]
-467,subsanación,130,[]
-468,poder adjudicador,131,[]
-469,adjudicación,131,[]
-470,trabajador minusválido,132,[]
-471,minusválido,132,[]
-472,fianza,133,[]
-473,aval bancario,133,[]
-474,avales,133,[]
-475,aval,133,[]
-476,construcción de viviendas,134,[]
-477,política de la vivienda,134,[]
-478,medida preventiva,135,[]
-479,medida conservativa,135,[]
-480,medida cautelar,135,[]
-481,ilegalidad,136,[]
-482,legalidad,136,[]
-483,jurisdicción laboral,137,[]
-484,jurisdicción del orden social,137,[]
-485,jurisdicción social,137,[]
-486,procedimiento legislativo de la Unión Europea,138,[]
-487,elaboración del Derecho de la UE,138,[]
-488,consumidor,139,[]
-489,JRC,139,[]
-490,heterótrofo,139,[]
-491,plan de acción en favor de los consumidores,139,[]
-492,educación del consumidor,139,[]
-493,Red para la solución extrajudicial de litigios de consumo,139,[]
-494,información al consumidor,139,[]
-495,notificacion,140,[]
-496,Notificación,140,[]
-497,legislación comercial,141,[]
-498,derecho mercantil,141,[]
-499,Derecho mercantil,141,[]
-500,permiso por asuntos propios,142,[]
-501,excedencia,142,[]
-502,movimiento sindical,143,[]
-503,sindicato obrero,143,[]
-504,sindicalismo,143,[]
-505,huelgas,144,[]
-506,paro laboral,144,[]
-507,huelga,144,[]
-508,preso,145,[]
-509,recluso,145,[]
-510,rectitud,146,[]
-511,probidad,146,[]
-512,lealtad,146,[]
-513,buena fe,146,[]
-514,subsidio de vejez,147,[]
-515,plan de pensiones,147,[]
-516,procedimiento de quiebra,148,[]
-517,procedimiento concursal,148,[]
-518,Discriminación social,149,[]
-519,Discriminación de género,149,[]
-520,Discriminador,149,[]
-521,Discriminatorio,149,[]
-522,discriminación,149,"[53, 54]"
-523,código internacional de conducta,150,[]
-524,comportamiento,150,[]
-525,conducta,150,[]
-526,disposición del contrato,151,[]
-527,contractual,151,[]
-528,cura médica,152,[]
-529,cuidado de la salud,152,[]
-530,un sistema de precios mínimos,153,[]
-531,en sustitución de los contingentes,153,[]
-532,aplicar,153,[]
-533,orden de pago,154,[]
-534,libramiento,154,[]
-535,libranza,154,[]
-536,procuración,154,[]
-537,mandato,154,[]
-538,ley marco,155,[]
-539,norma jurídica,155,[]
-540,reforma de la ley,155,[]
-541,ley constitutiva,155,[]
-542,recurso en interés de ley,155,[]
-543,redacción de la ley,155,[]
-544,ley aplicable,155,[]
-545,ley de patentes,155,[]
-546,propuesta de ley,155,[]
-547,rechazo de la ley,155,[]
-548,orden ministerial,155,[]
-549,infracción del código de tráfico,155,[]
-550,finura milesimal,155,[]
-551,interpretación judicial,155,[]
-552,norma,155,[]
-553,vigencia de la ley,155,[]
-554,comentario sobre un texto legislativo,155,[]
-555,ley electoral nacional,155,[]
-556,ley habilitante,155,[]
-557,violación de la ley,155,[]
-558,retroactividad,155,[]
-559,ley,155,[]
-560,representante legal,156,[]
-561,representación jurídica,156,[]
-562,representación legal,156,[49]
-563,educación,157,[]
-564,enseñanza,157,[]
-565,formación,157,"[28, 29, 57, 65]"
-566,trabajador minusválido,158,[]
-567,trabajador con discapacidad,158,[]
-568,consejero jurídico,159,[]
-569,asesor jurídico,159,[]
-570,conflicto salarial,160,[]
-571,conflicto laboral,160,[]
-572,examen,161,[]
-573,evaluación,161,[]
-574,estimación,161,[]
-575,apreciación,161,[]
-576,enjuiciamiento,161,[]
-577,valoración,161,[]
-578,análisis,161,[]
-579,soporte físico informático,162,[]
-580,equipo informático,162,[]
-581,subsidio de vejez,163,[]
-582,plan de pensiones,163,[]
-583,responsabilidad criminal,164,[]
-584,responsabilidad penal,164,[]
-585,contaminador-pagador,165,[]
-586,principio de quien contamina paga,165,[]
-587,Prevencion de riesgo laboral,166,[]
-588,Prevencion de riesgos laborales,166,[]
-589,Prevención de riesgo laboral,166,[]
-590,Higiene industrial,166,[]
-591,Salud laboral,166,[]
-592,Seguridad laboral,166,[]
-593,Prevención de riesgos laborales,166,[57]
-594,hipotecas,167,[]
-595,credito hipotecario,167,[]
-596,gravamen,167,[]
-597,contrato de hipoteca,167,[]
-598,préstamo hipotecario,167,[]
-599,crédito hipotecario,167,[]
-600,hipotecaria,167,[]
-601,prestamo hipotecario,167,[]
-602,gravámen,167,[]
-603,Derecho hipotecario,167,[]
-604,hipotecar,167,[]
-605,hipotecario,167,[]
-606,hipoteca,167,[]
-607,pensionista,168,[]
-608,persona jubilada,168,[]
-609,publicitaria,169,[]
-610,mensajes publicitarios,169,[]
-611,diseno publictario,169,[]
-612,spam,169,[]
-613,advertising,169,[]
-614,hacer publico,169,[]
-615,medidas de publicidad,169,[]
-616,diseno publicitario,169,[]
-617,publicidad falsa,169,[]
-618,diseño publicitario,169,[]
-619,reclamación (por mercancía defectuosa),169,[]
-620,diseño publictario,169,[]
-621,publicitario,169,[]
-622,hacer público,169,[]
-623,mensajes comerciales,169,[]
-624,publicidad comercial,169,[]
-625,propaganda,169,[]
-626,publicidades,169,[]
-627,reclame,169,[]
-628,publicidad,169,[]
-629,complemento de jubilación,170,[]
-630,pensión complementaria,170,[]
-631,doctorat,171,[]
-632,título universitario,171,[]
-633,Doctorado (Francia),171,[]
-634,doctorado,171,[]
-635,Antiguedad,172,[]
-636,Antiguedades,172,[]
-637,Antigüedades,172,[]
-638,antigüedad,172,[]
-639,artistico,173,[]
-640,artístico,173,[]
-641,artística,173,[]
-642,torero,173,[]
-643,artistica,173,[]
-644,profesión artística,173,[]
-645,sanidad pública,174,[]
-646,salud pública,174,[]
-647,alimento dietético,175,[]
-648,régimen,175,"[62, 82, 83, 85, 86, 97, 115, 129]"
-649,persona,176,[]
-650,persona juridica,176,[]
-651,persona moral,176,[]
-652,personas jurídicas,176,[]
-653,personas juridicas,176,[]
-654,persona jurídica,176,[]
-655,compra a plazos,177,[]
-656,créditos,177,[]
-657,crédito,177,[]
-658,AISS,178,[]
-659,asociación internacional de la seguridad social,178,[]
-660,sindicato obrero,179,[]
-661,sindicato,179,[]
-662,ERTE,180,[]
-663,Expediente de Regulación de Empleo,180,[]
-664,ERE,180,[]
-665,residencia principal,181,[]
-666,residencia,181,[]
-667,descontento social,182,[]
-668,problema social,182,[]
-669,horas sindicales,183,[]
-670,crédito de horas,183,[]
-671,crédito horario,183,[]
-672,contrato formativo,184,[]
-673,contrato de formación,184,[]
-674,contratos formativos,184,[147]
-675,paga extra,185,[]
-676,pago adicional,185,[]
-677,paga extraordinaria,185,[]
-678,gratificaciones extraordinarias,185,[73]
-679,tarjeta gráfica,186,[]
-680,ampliación,186,[]
-681,poder de compra,187,[]
-682,poder adquisitivo,187,[]
-683,lugar de trabajo,188,[]
-684,puesto de trabajo,188,[]
-685,centro de trabajo,188,[4]
-686,Family Law,189,[]
-687,derecho familiar,189,[]
-688,Derecho de las familias,189,[]
-689,derecho de familia,189,[]
-690,marido,190,[]
-691,cónyuge,190,[]
-692,cumplimiento de la ley,191,[]
-693,desarrollo de la ley,191,[]
-694,ejecución de la ley,191,[]
-695,vigencia,191,[136]
-696,contratista,192,[91]
-697,industrial,192,[]
-698,patrono,192,[]
-699,patrón,192,[]
-700,parte contratante,192,[]
-701,empresario,192,"[1, 21, 24, 59, 63, 90, 92, 102]"
-702,oferta pública de intercambio,193,[]
-703,adquisición,193,[]
-704,permiso,194,[]
-705,consentimiento,194,[]
-706,aprobación,194,[]
-707,beneplácito,194,[]
-708,licencia,194,[]
-709,aceptación,194,[]
-710,autorización,194,[]
-711,obligación civil,195,[]
-712,Derecho de las obligaciones,195,[]
-713,Ley organica,196,[]
-714,ley reguladora de los órganos del Estado,196,[]
-715,ley orgánica,196,[]
-716,oficina electoral,197,[]
-717,local electoral,197,[]
-718,mesa electoral,197,"[125, 126]"
-719,aislamiento de huecos,198,[]
-720,cavidades,198,[]
-721,protección,198,[]
-722,adquisición,199,[]
-723,compra,199,[]
-724,estatuto de autonomía,200,[]
-725,autogobierno,200,[]
-726,turno,201,[]
-727,turno de trabajo,201,[]
-728,subcomisión parlamentaria,202,[]
-729,comision parlamentaria,202,[]
-730,comisión parlamentaria,202,[]
-731,tributo,203,[]
-732,impuesto,203,[]
-733,Politica,204,[]
-734,política,204,[]
-735,continuación,205,[]
-736,extensión,205,[142]
-737,prolongación,205,[]
-738,desviación de poder,206,[]
-739,autoridad,206,[]
-740,ETT,207,[]
-741,empresa de trabajo temporal,207,[]
-742,calendario de trabajo,208,[]
-743,calendario laboral,208,[]
-744,responsabilidad de productor,209,[]
-745,responsabilidad por vicios ocultos,209,[]
-746,responsabilidad del fabricante,209,[]
-747,S Coop.,210,[]
-748,Coop,210,[]
-749,Cooperativas,210,[]
-750,sociedad cooperativa europea,210,[]
-751,bodega cooperativa,210,[]
-752,sociedad cooperativa,210,[]
-753,cooperativa,210,[]
-754,S.Coop.,210,[]
-755,Sociedad Cooperativa,210,[]
-756,S Coop,210,[]
-757,Sociedades cooperativas,210,[]
-758,cooperativa europea,210,[]
-759,semana de x horas,211,[]
-760,jornada legal,211,[]
-761,ocupación efectiva,212,[]
-762,trabajo efectivo,212,[]
-763,Institucion,213,[]
-764,Institucional,213,[144]
-765,Instituciones,213,[]
-766,institución,213,[]
-767,range,214,[]
-768,fuerza,214,[]
-769,alcance,214,[]
-770,contenido,214,[]
-771,cobertura sanitaria universal,215,[]
-772,cobertura universal de enfermedad,215,[]
-773,edificación habitable,216,[]
-774,alojamiento,216,[]
-775,vivienda,216,[]
-776,Derecho común,217,[]
-777,derecho civil,217,[]
-778,conformismo,218,[]
-779,conformidad,218,[]
-780,viejo,219,[]
-781,tercera edad,219,[]
-782,sistema de reparación colectiva,220,[]
-783,recurso colectivo,220,[]
-784,delegada,221,[]
-785,delegado,221,[117]
-786,formación permanente,222,[]
-787,formación profesional continua,222,[]
-788,visado turístico,223,[]
-789,visa,223,[]
-790,visado,223,[]
-791,cantidad,224,[]
-792,monto,224,[]
-793,importe,224,[]
-794,cuantía,224,[]
-795,aplicación del Derecho de la Unión Europea,225,[]
-796,aplicación del derecho de la ue,225,[]
-797,pequeño comerciante,226,[]
-798,comercio,226,[]
-799,parto,227,[]
-800,maternidad,227,[]
-801,ventas al por menor,228,[]
-802,venta al detalle,228,[]
-803,comercio minorista,228,[]
-804,ventas al detalle,228,[]
-805,venta al por menor,228,[]
-806,comercio al por menor,228,[]
-807,horario variable,229,[]
-808,horario flexible,229,[]
-809,jornada reducida,230,[]
-810,reducción del tiempo de trabajo,230,[]
-811,reducción del trabajo,230,[]
-812,reducción de jornada laboral,230,[]
-813,reducción de jornada,230,[100]
-814,fibra óptica,231,[]
-815,satélite europeo de comunicaciones,231,[]
-816,tecnología de las telecomunicaciones,231,[]
-817,telecomunicación sin hilos,231,[]
-818,Telecomunicacion,231,[]
-819,banda ancha,231,[]
-820,telecomunicación,231,[]
-821,servicio económico,232,[]
-822,servicio economico,232,[]
-823,servicio,232,[]
-824,personalidad jurídica,233,[]
-825,estatuto jurídico,233,[]
-826,incumplimiento,234,[]
-827,inobservancia,234,[]
-828,fusión de empresas,235,[]
-829,absorción de empresas,235,[]
-830,armonización de los regímenes de seguridad social,236,[]
-831,armonización de la seguridad social,236,[]
-832,firma,237,[]
-833,empresa,237,"[3, 91, 107, 120]"
-834,normas consuetudinarias,238,[]
-835,fueros y costumbres,238,[]
-836,usos y costumbres,238,[10]
-837,vigencia,239,[136]
-838,validez,239,[]
-839,concentración de sociedades,240,[]
-840,concentración económica,240,[]
-841,ministerio público fiscal,241,[]
-842,ministerio fiscal,241,[]
-843,reglamento,242,[]
-844,estatuto,242,[0]
-845,duracion,243,[]
-846,vida,243,[77]
-847,atención a personas dependientes,243,[]
-848,duración,243,"[41, 46, 47, 51]"
-849,acción para entablar recurso,244,[]
-850,demanda de recurso,244,[]
-851,vía de revisión,244,[]
-852,recurso,244,[]
-853,Licenciado,245,[]
-854,letrado,245,[]
-855,licenciado en derecho,245,[]
-856,abogados,245,[]
-857,abogada,245,[]
-858,abogadas,245,[]
-859,Licenciada,245,[]
-860,abogado,245,[]
-861,organismo regional,246,[]
-862,administración regional,246,[]
-863,movimientos políticos y sociales,247,[]
-864,movimientos de opinión,247,[]
-865,economato,248,[]
-866,organización de consumidores,248,[]
-867,legislación en materia de protección de los consumidores,248,[]
-868,plan de acción en favor de los consumidores,248,[]
-869,política de consumo,248,[]
-870,consumidores,248,[]
-871,procedimiento de comité,249,[]
-872,comité,249,"[118, 119, 120, 121, 123]"
-873,práctica comercial restrictiva,250,[]
-874,restricción de la competencia,250,[]
-875,desviación de poder,251,[]
-876,abuso de poder,251,[]
-877,servicios profesionales,252,[]
-878,profesión liberal,252,[]
-879,ampliación del periodo de vacaciones,253,[]
-880,ampliación de vacaciones,253,[]
-881,marcación de precios,254,[]
-882,indicación del precio,254,[]
-883,publicidad de los precios,254,[]
-884,ingresos sociales,255,[]
-885,transferencias sociales,255,[]
-886,edad de jubilación,256,[]
-887,condición de jubilación,256,[]
-888,rendimiento tipo,257,[]
-889,productividad del trabajo,257,[]
-890,normas de conducta,258,[]
-891,prescripción,258,[116]
-892,asesor de impuestos,259,[]
-893,asesor tributario,259,[]
-894,asesor fiscal,259,[]
-895,revolución,260,[]
-896,violencia política,260,[]
-897,excedencia,261,[]
-898,suspensión del contrato laboral,261,[]
-899,interrupción de la actividad profesional,261,[]
-900,suspensión del contrato,261,[]
-901,afiliación,262,[]
-902,afinidad,262,[]
-903,práctica política,263,[]
-904,comportamiento político,263,[]
-905,transferencia de los derechos de pensión,264,[]
-906,transferencia de los derechos a pensión,264,[]
-907,transferencia de derechos de pensión,264,[]
-908,reunion,265,[]
-909,reunión,265,[]
-910,promoción,266,"[65, 67]"
-911,ascenso,266,[]
-912,comercializadora,267,[]
-913,compañía comercializadora,267,[]
-914,comercializador,267,[]
-915,disposición,268,[]
-916,reglamento,268,[]
-917,ordenanza,268,[]
-918,instrucción,268,[]
-919,cuota de la seguridad social,269,[]
-920,cotización social,269,[]
-921,seguridad del trabajador,270,[]
-922,seguridad laboral,270,[]
-923,seguridad en el lugar de trabajo,270,[]
-924,riesgo profesional,270,[]
-925,seguridad en el trabajo,270,[]
-926,transferencia directa,271,[]
-927,transconexión,271,[]
-928,cesión de derecho,271,[]
-929,conexión en transferencia,271,[]
-930,cesion de derechos,271,[]
-931,transferencia,271,[]
-932,sistema escolar,272,[]
-933,sistema educativo,272,[]
-934,medida apropriada,273,[]
-935,medida oportuna,273,[]
-936,interés difuso,274,[]
-937,interés colectivo,274,[]
-938,asistencia social,275,[]
-939,prestación o transferencia social,275,[]
-940,pensión,275,[]
-941,prestación social,275,[]
-942,reglamentaciones,276,[]
-943,disposiciones reglamentarias,276,[]
-944,procedencia,277,[]
-945,admisibilidad,277,[]
-946,incompetencia profesional,278,[]
-947,calificación profesional,278,[]
-948,cualificación profesional,278,[]
-949,Consanguineo,279,[]
-950,Consanguíneo,279,[]
-951,Consanguineidad,279,[]
-952,consanguinidad,279,[]
-953,paraíso bancario,280,[]
-954,paraisos fiscales,280,[]
-955,paraiso fiscal,280,[]
-956,paraíso tributario,280,[]
-957,paraísos fiscales,280,[]
-958,paraíso financiero,280,[]
-959,paraíso fiscal,280,[]
-960,Norma,281,[]
-961,Normas sociales,281,[]
-962,norma social,281,[]
-963,organización gubernamental,282,[]
-964,organismo autonomo,282,[]
-965,agencia estatal,282,[]
-966,organismo autonomo administrativo,282,[]
-967,agencia publica,282,[]
-968,organismo autónomo,282,[]
-969,organismo publico,282,[]
-970,agencia gubernamental,282,[]
-971,organismo autónomo administrativo,282,[]
-972,organizacion gubernamental,282,[]
-973,agencia pública,282,[]
-974,Organismo autónomo,282,[]
-975,servicios subcontratados,283,[]
-976,trabajador por cuenta propia,283,[]
-977,profesión independiente,283,[]
-978,transferencia monetaria,284,[]
-979,transferencia de capitales,284,[]
-980,renta accesoria,285,[]
-981,renta complementaria,285,[]
-982,Pacto o contrato colectivo,286,[]
-983,Negociacion colectiva,286,[]
-984,Acuerdo de closed shop,286,[]
-985,negociación colectiva,286,[]
-986,trabajador por cuenta propia,287,[]
-987,trabajador autónomo,287,[]
-988,formulación de políticas,288,[]
-989,elaboración de políticas,288,[]
-990,sobresueldo,289,[]
-991,prima salarial,289,[]
-992,parte interesada,290,[]
-993,interés legítimo,290,[]
-994,legitimación,290,[]
-995,vertiente jurídica,291,[]
-996,legislación,291,"[1, 3]"
-997,representación de los trabajadores,292,[]
-998,representación del personal,292,[]
-999,Marco Común Europeo de Referencia para las Lenguas,293,[]
-1000,competencia institucional CE,293,[]
-1001,política de competencia de la Unión Europea,293,[]
-1002,competencia de la Unión Europea,293,[]
-1003,competencias externas CE,293,[]
-1004,competencia compartida,293,[]
-1005,competencia por razón de materia,293,[]
-1006,incompetencia profesional,293,[]
-1007,práctica comercial restrictiva,293,[]
-1008,Competencia económica,293,[]
-1009,reglamentación de la competencia,293,[]
-1010,competencia de apoyo,293,[]
-1011,dominio de las herramientas informáticas,293,[]
-1012,competencia judicial,293,[]
-1013,Competencia economica,293,[]
-1014,competencia,293,[]
-1015,plan de acción en favor de los consumidores,294,[]
-1016,protección del consumidor,294,[]
-1017,cymuned,295,[]
-1018,comunidad,295,[]
-1019,Conflicto dramatico,296,[]
-1020,Conflicto dramático,296,[]
-1021,conflicto,296,[]
-1022,dignidad humana,297,[]
-1023,dignidad,297,[]
-1024,retención fiscal en la fuente,298,[]
-1025,retención,298,[]
-1026,cláusula inhibitoria de la competencia,299,[]
-1027,pacto de no concurrencia,299,[61]
-1028,MCR,300,[]
-1029,marco común de referencia,300,[]
-1030,Amortizada,301,[]
-1031,Amortizacion,301,[]
-1032,Amortizar,301,[]
-1033,amortización industrial,301,[]
-1034,amortización,301,[]
-1035,derecho al salario,302,[]
-1036,crédito salarial,302,[]
-1037,permiso,303,[]
-1038,tiempo de descanso,303,[]
-1039,fomento económico,304,[]
-1040,impulso económico,304,[]
-1041,promoción económica,304,[67]
-1042,remision,305,[]
-1043,cura,305,[]
-1044,remisión,305,[]
-1045,precio de cesión,306,[]
-1046,cesión,306,[]
-1047,remuneración del capital,307,[]
-1048,mercado de obligaciones,307,[]
-1049,renta del ganadero,307,[]
-1050,renta por habitante,307,[]
-1051,retribución del trabajo,307,[]
-1052,impuesto sobre la renta de sociedades,307,[]
-1053,impuesto sobre la renta de las sociedades,307,[]
-1054,renta agrícola,307,[]
-1055,renta de aduanas,307,[]
-1056,renta accesoria,307,[]
-1057,IRPF,307,[]
-1058,asignación de la renta,307,[]
-1059,certificado representativo de acciones,307,[]
-1060,porcentaje,307,[]
-1061,renta garantizada,307,[]
-1062,declaración del patrimonio,307,[]
-1063,renta,307,[]
-1064,sistema de reparación colectiva,308,[]
-1065,colectivo,308,"[107, 140]"
-1066,ET,309,[]
-1067,estatuto de los trabajadores,309,[0]
-1068,colegio de abogados,310,[]
-1069,abogacía,310,[]
-1070,salario minimo,311,[]
-1071,sueldo sujeto al índice del coste de la vida,311,[]
-1072,salario mínimo legal mensual vigente,311,[]
-1073,sueldo mínimo,311,[]
-1074,ingreso minimo mensual,311,[]
-1075,ingreso mínimo mensual,311,[]
-1076,sueldo minimo,311,[]
-1077,salario minimo legal mensual vigente,311,[]
-1078,salario minimo interprofesional,311,[]
-1079,remuneracion minima vital,311,[]
-1080,remuneración mínima,311,[]
-1081,remuneracion minima,311,[]
-1082,salario mínimo interprofesional,311,[71]
-1083,remuneración mínima vital,311,[]
-1084,salario mínimo,311,[]
-1085,pérdida de empleo,312,[]
-1086,reducción del personal,312,[]
-1087,Verringerung der Belegschaft,312,[]
-1088,supresión de empleo,312,[]
-1089,sociedad público-privada,313,[]
-1090,asociación sectores público y privado,313,[]
-1091,Trabajos extraescolares,314,[]
-1092,Trabajos escolares,314,[]
-1093,Deberes escolares,314,[]
-1094,Tarea escolar,314,[]
-1095,Trabajo extraescolar,314,[]
-1096,trabajo escolar,314,[]
-1097,unidad familiar,315,[]
-1098,familia,315,[]
-1099,hogar,315,[]
-1100,fiesta oficial,316,[]
-1101,fiestas,316,[83]
-1102,paro de la producción,317,[]
-1103,interrupción,317,[]
-1104,beneficio no pecuniario,318,[]
-1105,remuneración en especie,318,[]
-1106,restricción de una función,319,[]
-1107,restricción,319,[]
-1108,denuncia,320,[]
-1109,acción restitutoria,320,[]
-1110,reclamación,320,[]
+,palabra,sinonimos
+0,derecho supletorio,['derecho']
+1,centro formativo,"['formación', 'educación', 'enseñanza']"
+2,modificación,"['propuesta de modificación', 'modificacion', 'mod']"
+3,adopción,"['adopcion', 'filiación adoptiva']"
+4,dietas y gastos,"['gastos de viaje', 'remuneración']"
+5,formación teórica,"['formación', 'educación', 'enseñanza']"
+6,jornada,"['trabajo a media jornada', 'día laborable']"
+7,pagaré,"['certificado de depósito', 'pagare']"
+8,institución pública,"['organismo público de españa', 'organismo público', 'organismo publico', 'organismo público (españa)', 'institución', 'institucion', 'institucional', 'instituciones']"
+9,asociación,"['sociedad', 'unión', 'corporación', 'cooperativa']"
+10,período de prueba,"['período de prácticas', 'periodo']"
+11,contaminación,"['coste de los daños medioambientales', 'vertidos toxicos', 'contaminante', 'la contaminacion', 'contaminado', 'la contaminación', 'emision contaminante', 'contaminacion ambiental', 'contaminada', 'contaminar', 'contaminacion', 'polucion', 'contaminación ambiental', 'vertidos tóxicos', 'polución', 'emisión contaminante']"
+12,disposición legal,"['instrucción', 'disposición', 'reglamento', 'ordenanza']"
+13,secretario judicial,"['actuario', 'funcionario judicial']"
+14,movimiento de consumidores,"['organización de consumidores', 'movimiento social', 'movimientos sociales', 'consumidores', 'economato', 'organización de consumidores', 'legislación en materia de protección de los consumidores', 'plan de acción en favor de los consumidores', 'política de consumo']"
+15,patrimonio,['salvaguardia del patrimonio cultural']
+16,salario mínimo interprofesional,"['smi', 'salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+17,derechos de los pasajeros,"['indicador de rendimiento clave', 'derechos de los pasajeros de tren', 'derecho']"
+18,jurisdicción,"['sistema jurisdiccional', 'competencia judicial']"
+19,extinción por voluntad del trabajador,"['extinción del contrato', 'extinción de la relación laboral', 'despido']"
+20,renovación urbana,['revitalización urbana']
+21,extranjero,"['extranjeros', 'extranjera']"
+22,jornada,"['jornada de trabajo', 'día laborable', 'jornada laboral', 'organización del trabajo']"
+23,análisis de coste-eficacia,"['eficacia en función de los costes', 'análisis', 'examen', 'evaluación', 'estimación', 'apreciación', 'enjuiciamiento', 'valoración']"
+24,calidad del producto,"['criterio de calidad', 'consumidores', 'economato', 'organización de consumidores', 'legislación en materia de protección de los consumidores', 'plan de acción en favor de los consumidores', 'política de consumo']"
+25,despido improcedente,"['despido', 'improcedente']"
+26,jornada de trabajo,"['jornada laboral', 'jornada', 'trabajo a media jornada', 'día laborable']"
+27,autorización administrativa,"['autorización', 'permiso', 'consentimiento', 'aprobación', 'beneplácito', 'licencia', 'aceptación', 'administración', 'ubicación del organismo público']"
+28,comunidad de bienes,"['sociedad conyugal', 'comunidad', 'cymuned']"
+29,compensación económica,['compensación']
+30,comisión mixta,"['comisión', 'puesta en servicio']"
+31,organismo público,"['entidad de derecho público', 'organismo de derecho público', 'organismo publico', 'organismo público de españa', 'organismo público (españa)', 'organismo']"
+32,productividad,['productividad biológica']
+33,migración,"['repatriado', 'reunificación familiar', 'migratorio', 'migraciones', 'migración interna', 'tasa de migración', 'migración elegida', 'nuevo asentamiento', 'estadísticas de asilo', 'migración estacional', 'migración de trabajo', 'migratoria', 'migración clandestina', 'emigra', 'migrante comunitario', 'migracion', 'mujer migrante', 'éxodo rural', 'trayecto domicilio-trabajo']"
+34,derecho de litigar,"['derecho de recurso', 'derecho civil', 'derecho común']"
+35,trabajo,['empleo']
+36,política pública,"['política gubernamental', 'políticas públicas', 'política', 'politica']"
+37,incapacidad,"['incapacidad civil', 'incapacidad contractual']"
+38,funcionario público,"['servidor público', 'cargo público', 'funcionario publico', 'funcionario']"
+39,permiso de maternidad,"['permiso por maternidad', 'ausencia', 'permiso']"
+40,convenio colectivo,"['acuerdo colectivo', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+41,derecho indisponible,['derecho']
+42,administración,['ubicación del organismo público']
+43,principio de no discriminación,['principio']
+44,jornada reducida,"['jornada de trabajo', 'jornada laboral']"
+45,administración electrónica,"['administración digital', 'administración pública', 'administración del estado', 'gestion publica', 'administración publica', 'oficinas publicas', 'administracion pública', 'oficinas públicas', 'gestión pública', 'gestión publica', 'gestion pública', 'administraciones públicas', 'administracion del estado', 'administracion publica', 'administraciones publicas']"
+46,cómputo anual,['computar']
+47,discriminación por razones de religión,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+48,contingencia común,['contingencia']
+49,acoso laboral,"['acoso moral en el trabajo', 'hostigamiento laboral', 'violencia psicológica en el trabajo', 'mobbing', 'acoso']"
+50,duración de la conducción,"['duración', 'duracion', 'vida', 'atención a personas dependientes']"
+51,sentencia,"['vía ejecutiva', 'sentencia judicial', 'juicio']"
+52,seguridad social,"['protección social', 'seguro social', 'sistema de previsión social', 'previsión social']"
+53,trabajo dominical,"['trabajo en días no laborables', 'jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'trabajo', 'empleo']"
+54,acción,['programa de acción']
+55,publicidad abusiva,"['publicidad engañosa', 'publicidad falsa', 'publicidad', 'publicitaria', 'mensajes publicitarios', 'diseno publictario', 'spam', 'advertising', 'hacer publico', 'medidas de publicidad', 'diseno publicitario', 'publicidad falsa', 'diseño publicitario', 'reclamación (por mercancía defectuosa)', 'diseño publictario', 'publicitario', 'hacer público', 'mensajes comerciales', 'publicidad comercial', 'propaganda', 'publicidades', 'reclame']"
+56,administración institucional,"['administración pública', 'administración del estado', 'gestion publica', 'administración publica', 'oficinas publicas', 'administracion pública', 'oficinas públicas', 'gestión pública', 'gestión publica', 'gestion pública', 'administraciones públicas', 'administracion del estado', 'administracion publica', 'administraciones publicas']"
+57,asamblea de trabajadores,"['trabajo', 'empleo']"
+58,cotización del salario,"['salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra', 'cotización']"
+59,acuerdo tácito,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+60,riesgo,"['riesgos', 'arriesgado']"
+61,operación mercantil,['operación']
+62,turismo,"['viaje por motivos de salud', 'turismo ético', 'turismo náutico', 'turismo de congresos', 'vacaciones en el campo', 'turismo respetuoso del medio ambiente', 'peregrinaje']"
+63,víctima,"['perjudicado', 'parte perjudicada']"
+64,ámbito territorial,"['ámbito de aplicación territorial', 'ámbito de aplicación']"
+65,derecho de los consumidores,"['legislación en materia de protección de los consumidores', 'derecho en materia de protección de los consumidores', 'consumidores', 'economato', 'organización de consumidores', 'legislación en materia de protección de los consumidores', 'plan de acción en favor de los consumidores', 'política de consumo']"
+66,ley de enjuiciamiento civil,"['ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+67,aplicación,"['despliegue', 'implementación', 'aplicar', 'un sistema de precios mínimos', 'en sustitución de los contingentes']"
+68,entidad jurídica,"['entidad legal', 'ente jurídico']"
+69,hora extraordinaria,"['hora extra', 'jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'horario de trabajo', 'hora de trabajo']"
+70,especialización profesional,['reciclaje de conocimientos']
+71,defensor judicial,"['abogacía', 'colegio de abogados']"
+72,extinción del contrato,"['extinción de la relación laboral', 'despido']"
+73,paro,['índice de desempleo']
+74,acuerdo interprofesional,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+75,asalariado,"['trabajador asalariado', 'categoría profesional', 'trabajador', 'empleado', 'miembro del personal']"
+76,personal adscrito,['personal']
+77,derecho de la seguridad social,"['seguridad social', 'protección social', 'seguro social', 'sistema de previsión social', 'previsión social']"
+78,administración central,"['administración', 'ubicación del organismo público']"
+79,sede de la administración,['ubicación del organismo público']
+80,concertación social,['concertación']
+81,costes ambientales,['coste ecológico']
+82,profesión,"['carrera profesional', 'profesiones', 'profesion']"
+83,pluriempleo,['actividad complementaria']
+84,discriminación por razones de estado civil,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+85,traslado,"['cambio de puesto', 'cambio de lugar de trabajo']"
+86,contrato,"['contrato laboral', 'contrato por internet', 'acuerdo', 'convenio', 'contratación']"
+87,permiso retribuido,['permiso']
+88,domicilio legal,['personalidad jurídica']
+89,exclusión social,['marginación social']
+90,consejero,"['miembro del consejo de gobierno', 'trabajador por cuenta propia', 'conseller', 'ministro']"
+91,ausencia del trabajo,"['ausencia', 'ausencia']"
+92,acción positiva,"['acción', 'programa de acción']"
+93,administración pública,"['administración del estado', 'gestion publica', 'administración publica', 'oficinas publicas', 'administracion pública', 'oficinas públicas', 'gestión pública', 'gestión publica', 'gestion pública', 'administraciones públicas', 'administracion del estado', 'administracion publica', 'administraciones publicas', 'administración central']"
+94,pensionista,"['rentista', 'retirado', 'jubilado', 'pensión', 'pensión (hospedaje)', 'posada secreta', 'casa de huéspedes']"
+95,profesión jurídica,"['procurador', 'profesión', 'carrera profesional', 'profesiones', 'profesion']"
+96,medida,['unidad de medida']
+97,contrato de interinidad,"['trabajo interino', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+98,movimiento social,['movimientos sociales']
+99,responsabilidad,"['responsabilidad por los daños ecológicos', 'responsabilidad pública', 'responsabilidad legal', 'responsabilidad medioambiental de la empresa', 'utilización pacífica del espacio', 'sociedad limitada', 'responsabilidad del gobierno', 'minoría de edad en derecho penal', 'responsabilidad de la administración pública', 'responsabilidad por vicios ocultos', 'acción por daños y perjuicios']"
+100,descanso,"['pausa', 'recreo', 'baja', 'ausencia']"
+101,puesto de trabajo,['puesto de trabajo de proceso de datos']
+102,demanda,['escrito de recurso']
+103,parque móvil,['parque automovilístico']
+104,horario de trabajo,"['hora de trabajo', 'jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'horario']"
+105,contrato de trabajo,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+106,acto jurídico,"['acto legal', 'acto jurídico de la unión', 'accion legal', 'acción judicial', 'acción legal', 'acción', 'programa de acción']"
+107,bienes y servicios,"['bienes fisicos y servicios intangibles', 'bienes físicos y servicios intangibles']"
+108,trabajo a distancia,"['teletrabajo', 'trabajo atípico']"
+109,salario,"['remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+110,principio de legalidad,['principio']
+111,sindicación,"['sindicalismo', 'movimiento sindical', 'sindicato obrero']"
+112,desempleo,"['subsidio de paro', 'falta de trabajo', 'tasa de desempleo', 'desocupacion', 'desocupación', 'cesantia', 'paro forzoso', 'cesantía']"
+113,igualdad de remuneración por razón de sexo,"['igualdad salarial', 'igualdad de salario', 'igualdad']"
+114,aprendizaje,"['técnica de aprendizaje', 'aprender']"
+115,contrato público,"['objeto del contrato', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+116,gratificación,"['sobresueldo', 'propina']"
+117,marco,"['markka', 'merk', 'marc', 'marka', 'trama', 'mark']"
+118,contaminación de los alimentos,"['contaminación alimentaria', 'contaminación', 'coste de los daños medioambientales', 'vertidos toxicos', 'contaminante', 'la contaminacion', 'contaminado', 'la contaminación', 'emision contaminante', 'contaminacion ambiental', 'contaminada', 'contaminar', 'contaminacion', 'polucion', 'contaminación ambiental', 'vertidos tóxicos', 'polución', 'emisión contaminante']"
+119,sistema de alerta de la ue,['sistema de alerta rápida de la ue']
+120,delegados de personal,"['representante de personal', 'representante sindical', 'delegado', 'delegada']"
+121,red de centros europeos de los consumidores,"['red para la solución extrajudicial de litigios de consumo', 'educación del consumidor', 'consumidores', 'economato', 'organización de consumidores', 'legislación en materia de protección de los consumidores', 'plan de acción en favor de los consumidores', 'política de consumo']"
+122,información,"['datos', 'informacion', 'información policial confidencial']"
+123,convenio extraestatutario,"['convenio irregular', 'convenio colectivo extraestatutario', 'contrato colectivo extraestatutario', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+124,incapacidad permanente,"['incapacidad', 'incapacidad civil', 'incapacidad contractual']"
+125,comité de empresa,"['comité', 'procedimiento de comité']"
+126,derecho penitenciario,['derecho']
+127,contrato de relevo,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+128,comercio integrado,"['comercio', 'pequeño comerciante']"
+129,primacía del derecho,"['vigencia', 'cumplimiento de la ley', 'desarrollo de la ley', 'ejecución de la ley']"
+130,conflicto colectivo,"['conflicto salarial', 'conflicto', 'conflicto dramatico', 'conflicto dramático']"
+131,trabajo nocturno,"['jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'trabajo', 'empleo']"
+132,titulación,"['valoración volumétrica', 'análisis volumétrico', 'valoración química', 'valoracion química', 'valoración', 'volumetría', 'titracion', 'valoracion volumetrica', 'titulacion', 'titración']"
+133,aprobación del presupuesto,"['empresa', 'firma']"
+134,renta no salarial,"['porcentaje', 'remuneración', 'salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra', 'renta', 'remuneración del capital', 'mercado de obligaciones', 'renta del ganadero', 'renta por habitante', 'retribución del trabajo', 'impuesto sobre la renta de sociedades', 'impuesto sobre la renta de las sociedades', 'renta agrícola', 'renta de aduanas', 'renta accesoria', 'irpf', 'asignación de la renta', 'certificado representativo de acciones', 'porcentaje', 'renta garantizada', 'declaración del patrimonio']"
+135,salario mínimo interprofesional,"['salario garantizado', 'salario mínimo', 'política salarial']"
+136,filosofía política,"['filosofia politica', 'filosofia política', 'teoría política', 'política', 'politica']"
+137,equipo de trabajo,"['empresa', 'firma']"
+138,procedimiento judicial,['procedimiento']
+139,entidad del sector público,['ente del sector público']
+140,accidente,"['probar con ejemplo', 'cobertura de riesgos de accidente', 'falacia dicto simpliciter', 'accidente falacia']"
+141,despacho de abogados,"['abogado', 'licenciado', 'letrado', 'licenciado en derecho', 'abogados', 'abogada', 'abogadas', 'licenciada']"
+142,autoridad europea de seguros y pensiones de jubilación,"['eiopa', 'autoridad', 'desviación de poder']"
+143,formación profesional,"['formación preprofesional', 'formación', 'educación', 'enseñanza']"
+144,administración local,"['administracion local', 'autoridad local', 'administración pública', 'administración del estado', 'gestion publica', 'administración publica', 'oficinas publicas', 'administracion pública', 'oficinas públicas', 'gestión pública', 'gestión publica', 'gestion pública', 'administraciones públicas', 'administracion del estado', 'administracion publica', 'administraciones publicas']"
+145,tutela,"['tutela legal', 'derecho de familia', 'family law', 'derecho familiar', 'derecho de las familias']"
+146,norma administrativa,"['ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+147,unidad de negocio,['unidad empresarial']
+148,grado medio,['grado']
+149,jubilación parcial,['jubilación']
+150,dirección,['direccion']
+151,prescripción de la pena,"['rehabilitación', 'ejercicio de actuaciones judiciales', 'intervención del fiscal', 'acción penal', 'prescripción', 'normas de conducta']"
+152,relación laboral especial,"['relación laboral', 'vínculo laboral', 'relación de trabajo']"
+153,comisión,['puesta en servicio']
+154,cometido,"['delegación', 'comisión', 'función']"
+155,votación,"['voto electrónico', 'votación secreta', 'voto', 'voto por procuración', 'votación del presupuesto', 'papeleta de voto', 'última vuelta electoral']"
+156,representante,"['representación legal', 'representante legal', 'representación jurídica']"
+157,institución penitenciaria,"['prisión de alta seguridad', 'institución', 'institucion', 'institucional', 'instituciones']"
+158,trabajador,"['empleado', 'miembro del personal', 'trabajo', 'empleo']"
+159,capacidad profesional,['competencia profesional']
+160,discriminación directa,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+161,derecho laboral,"['derecho del trabajo', 'derecho']"
+162,principio de jerarquía normativa,['principio']
+163,título universitario,"['titulación', 'valoración volumétrica', 'análisis volumétrico', 'valoración química', 'valoracion química', 'valoración', 'volumetría', 'titracion', 'valoracion volumetrica', 'titulacion', 'titración']"
+164,oficina pública de empleo,['oficina pública']
+165,acuerdo por escrito,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+166,discriminación por razones de ideas políticas,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+167,órganos de administración de las empresas,['órgano de administración']
+168,jornada completa,"['dedicación completa', 'jornada de trabajo', 'jornada laboral']"
+169,acción de cesación,"['acción', 'programa de acción']"
+170,accidente laboral,"['accidente de trabajo', 'accidentes del trabajo', 'accidentes de trabajo', 'accidente', 'probar con ejemplo', 'cobertura de riesgos de accidente', 'falacia dicto simpliciter', 'accidente falacia']"
+171,condiciones de trabajo,"['cláusulas del contrato', 'condición']"
+172,causas y efectos de la suspensión,['causa de la suspensión']
+173,extinción del contrato por causas objetivas,"['despido objetivo', 'despido justificado', 'extinción del contrato', 'extinción de la relación laboral', 'despido']"
+174,abandono del trabajo,"['absentismo laboral', 'ausencia de puesto de trabajo', 'trabajo', 'empleo']"
+175,notario,"['notario público', 'fedatario público', 'notaria', 'secretario judicial', 'actuario']"
+176,ámbito,"['scope', 'ámbito de una declaración', 'ámbito de validez', 'ámbito de validez de una declaración']"
+177,trabajo diurno,"['trabajo', 'empleo']"
+178,actividad por cuenta ajena,"['actividad asalariada', 'actividad laboral']"
+179,trabajo de menores,"['trabajo', 'empleo']"
+180,pensión,"['pensión (hospedaje)', 'posada secreta', 'casa de huéspedes']"
+181,registro administrativo,"['administración', 'ubicación del organismo público']"
+182,agente judicial,"['alguacil', 'secretario judicial', 'actuario']"
+183,norma reglamentaria,"['norma legal', 'ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+184,vehículo comercial,"['vehiculo comercial', 'comercio', 'pequeño comerciante']"
+185,comité de empresa europeo,"['comité', 'procedimiento de comité', 'comité de empresa']"
+186,capacidad jurídica,"['incapacidad jurídica', 'capacidad juridica', 'personalidad jurídica']"
+187,titular,"['titular del cargo', 'titular del derecho']"
+188,gestión,"['management', 'administración']"
+189,autorización administrativa de la ett,"['autorización', 'permiso', 'consentimiento', 'aprobación', 'beneplácito', 'licencia', 'aceptación', 'administración', 'ubicación del organismo público']"
+190,contrato fijo-discontinuo,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+191,norma de producción,"['ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+192,instrumento internacional,"['instrucción', 'disposición', 'reglamento', 'ordenanza']"
+193,convocatoria,"['concurso-subasta', 'licitación', 'convocatoria de ofertas', 'concurso restringido', 'concurso público', 'subasta pública', 'pliego de condiciones generales', 'expediente de licitación', 'convocatoria de licitación', 'contrato público', 'objeto del contrato']"
+194,jubilado,['jubilación']
+195,ámbito estatal,['ámbito de aplicación']
+196,fondo de garantía salarial,"['fogasa', 'salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+197,formación práctica,"['formación', 'educación', 'enseñanza']"
+198,fallecimiento,"['defunción', 'muerte']"
+199,ámbito de aplicación,"['ámbito', 'scope', 'ámbito de una declaración', 'ámbito de validez', 'ámbito de validez de una declaración']"
+200,relación laboral,"['vínculo laboral', 'relación de trabajo']"
+201,duración del contrato,"['duración', 'duracion', 'vida', 'atención a personas dependientes']"
+202,subsanación,"['rectificación', 'corrección', 'enmienda', 'modificación', 'reforma']"
+203,adjudicación,['poder adjudicador']
+204,minusválido,['trabajador minusválido']
+205,organización del trabajo,['organización']
+206,aval,"['fianza', 'aval bancario', 'avales']"
+207,política de la vivienda,"['construcción de viviendas', 'política', 'politica', 'política pública', 'política gubernamental', 'políticas públicas']"
+208,medida cautelar,"['medida preventiva', 'medida conservativa', 'medida', 'unidad de medida']"
+209,legalidad,"['ilegalidad', 'legislación', 'vertiente jurídica']"
+210,norma estatuaria,"['ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+211,redistribución de la renta,"['salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+212,jurisdicción social,"['jurisdicción laboral', 'jurisdicción del orden social', 'jurisdicción', 'sistema jurisdiccional', 'competencia judicial']"
+213,elaboración del derecho de la ue,['procedimiento legislativo de la unión europea']
+214,información al consumidor,"['consumidor', 'jrc', 'heterótrofo', 'plan de acción en favor de los consumidores', 'educación del consumidor', 'red para la solución extrajudicial de litigios de consumo', 'información', 'datos', 'informacion', 'información policial confidencial']"
+215,trabajo atípico,"['trabajo', 'empleo']"
+216,alta dirección,"['dirección', 'direccion']"
+217,cláusula resolutoria,['cláusula']
+218,notificación,['notificacion']
+219,pacto individual,['pacto']
+220,derecho mercantil,"['legislación comercial', 'derecho mercantil', 'derecho']"
+221,excedencia,"['permiso por asuntos propios', 'exceder']"
+222,sindicalismo,"['movimiento sindical', 'sindicato obrero']"
+223,huelga,"['huelgas', 'paro laboral']"
+224,recluso,['preso']
+225,buena fe,"['rectitud', 'probidad', 'lealtad']"
+226,plan de pensiones,"['subsidio de vejez', 'prestación social', 'asistencia social', 'prestación o transferencia social', 'pensión']"
+227,análisis de políticas,"['análisis', 'examen', 'evaluación', 'estimación', 'apreciación', 'enjuiciamiento', 'valoración']"
+228,transferencia de la empresa,"['transferencia', 'transferencia directa', 'transconexión', 'cesión de derecho', 'conexión en transferencia', 'cesion de derechos']"
+229,cónyuge colaborador,"['categoría profesional', 'cónyuge', 'marido']"
+230,procedimiento concursal,"['procedimiento de quiebra', 'procedimiento']"
+231,discriminación,"['discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+232,conducta,"['código internacional de conducta', 'comportamiento']"
+233,hora complementaria,"['horario de trabajo', 'hora de trabajo']"
+234,derecho de la vivienda,"['derecho civil', 'derecho común']"
+235,contractual,"['disposición del contrato', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+236,conducta sancionable,"['conducta', 'código internacional de conducta', 'comportamiento']"
+237,directivo,['profesión administrativa']
+238,cuidado de la salud,['cura médica']
+239,servicio retribuido,"['servicio', 'servicio económico', 'servicio economico']"
+240,aplicar,"['un sistema de precios mínimos', 'en sustitución de los contingentes']"
+241,mandato,"['orden de pago', 'libramiento', 'libranza', 'procuración']"
+242,ley,"['ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+243,instrumento jurídico intergubernamental,"['instrucción', 'disposición', 'reglamento', 'ordenanza']"
+244,representación legal,"['representante legal', 'representación jurídica']"
+245,trabajos realizados a título de amistad,"['trabajo', 'empleo']"
+246,formación,"['educación', 'enseñanza']"
+247,política salarial,"['política', 'politica']"
+248,trabajador con discapacidad,"['trabajador minusválido', 'discapacidad', 'trabajador', 'empleado', 'miembro del personal']"
+249,indemnización del seguro,['indemnización']
+250,asesor jurídico,"['consejero jurídico', 'secretario judicial', 'actuario']"
+251,acción de nulidad,"['acción', 'programa de acción']"
+252,conflicto laboral,"['conflicto salarial', 'conflicto', 'conflicto dramatico', 'conflicto dramático']"
+253,rescindir un contrato,['rescindir']
+254,análisis,"['examen', 'evaluación', 'estimación', 'apreciación', 'enjuiciamiento', 'valoración']"
+255,equipo informático,['soporte físico informático']
+256,plan de pensiones,"['subsidio de vejez', 'pensión', 'pensión (hospedaje)', 'posada secreta', 'casa de huéspedes']"
+257,responsabilidad penal,"['responsabilidad criminal', 'responsabilidad', 'responsabilidad por los daños ecológicos', 'responsabilidad pública', 'responsabilidad legal', 'responsabilidad medioambiental de la empresa', 'utilización pacífica del espacio', 'sociedad limitada', 'responsabilidad del gobierno', 'minoría de edad en derecho penal', 'responsabilidad de la administración pública', 'responsabilidad por vicios ocultos', 'acción por daños y perjuicios']"
+258,principio de quien contamina paga,"['contaminador-pagador', 'principio']"
+259,prevención de riesgos laborales,"['prevencion de riesgo laboral', 'prevencion de riesgos laborales', 'prevención de riesgo laboral', 'higiene industrial', 'salud laboral', 'seguridad laboral', 'prevención']"
+260,hipoteca,"['hipotecas', 'credito hipotecario', 'gravamen', 'contrato de hipoteca', 'préstamo hipotecario', 'crédito hipotecario', 'hipotecaria', 'prestamo hipotecario', 'gravámen', 'derecho hipotecario', 'hipotecar', 'hipotecario']"
+261,persona jubilada,"['pensionista', 'personal']"
+262,actividad laboral,"['trabajo', 'empleo']"
+263,publicidad,"['publicitaria', 'mensajes publicitarios', 'diseno publictario', 'spam', 'advertising', 'hacer publico', 'medidas de publicidad', 'diseno publicitario', 'publicidad falsa', 'diseño publicitario', 'reclamación (por mercancía defectuosa)', 'diseño publictario', 'publicitario', 'hacer público', 'mensajes comerciales', 'publicidad comercial', 'propaganda', 'publicidades', 'reclame']"
+264,hogar familiar,"['hogar', 'unidad familiar', 'familia']"
+265,forma del contrato,['pacto']
+266,pensión complementaria,"['complemento de jubilación', 'plan de pensiones', 'subsidio de vejez', 'pensión', 'pensión (hospedaje)', 'posada secreta', 'casa de huéspedes']"
+267,condición social,['condición']
+268,doctorado,"['doctorat', 'título universitario', 'doctorado (francia)']"
+269,antigüedad,"['antiguedad', 'antiguedades', 'antigüedades']"
+270,profesión artística,"['artistico', 'artístico', 'artística', 'torero', 'artistica', 'profesión', 'carrera profesional', 'profesiones', 'profesion']"
+271,salud pública,['sanidad pública']
+272,régimen,['alimento dietético']
+273,persona jurídica,"['persona', 'persona juridica', 'persona moral', 'personas jurídicas', 'personas juridicas', 'personal', 'personalidad jurídica']"
+274,crédito,"['compra a plazos', 'créditos']"
+275,seguridad y salud en el trabajo,"['seguridad social', 'protección social', 'seguro social', 'sistema de previsión social', 'previsión social']"
+276,asociación internacional de la seguridad social,"['aiss', 'asociación', 'sociedad', 'unión', 'corporación', 'cooperativa']"
+277,capacidad para contratar,"['capacidad profesional', 'competencia profesional']"
+278,sindicato,"['sindicato obrero', 'sindicalismo', 'movimiento sindical', 'sindicato obrero']"
+279,ere,"['erte', 'expediente de regulación de empleo']"
+280,residencia,['residencia principal']
+281,problema social,['descontento social']
+282,crédito horario,"['horas sindicales', 'crédito de horas', 'crédito', 'compra a plazos', 'créditos']"
+283,contratos formativos,"['contrato formativo', 'contrato de formación', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+284,gratificaciones extraordinarias,"['paga extra', 'pago adicional', 'paga extraordinaria', 'gratificación', 'sobresueldo', 'propina']"
+285,funcionario judicial,['funcionario']
+286,ampliación,['tarjeta gráfica']
+287,acción administrativa,"['acción', 'programa de acción', 'administración', 'ubicación del organismo público']"
+288,poder adquisitivo,['poder de compra']
+289,víctima de la violencia de género,"['víctima', 'perjudicado', 'parte perjudicada']"
+290,centro de trabajo,"['lugar de trabajo', 'puesto de trabajo', 'trabajo', 'empleo']"
+291,derecho de familia,"['family law', 'derecho familiar', 'derecho de las familias', 'derecho']"
+292,periodo de consultas,['periodo']
+293,cónyuge,['marido']
+294,vigencia,"['cumplimiento de la ley', 'desarrollo de la ley', 'ejecución de la ley', 'ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+295,empresario,"['contratista', 'industrial', 'patrono', 'patrón', 'parte contratante', 'empresa', 'firma']"
+296,adquisición,['oferta pública de intercambio']
+297,autorización,"['permiso', 'consentimiento', 'aprobación', 'beneplácito', 'licencia', 'aceptación']"
+298,patrimonio empresarial,"['patrimonio', 'salvaguardia del patrimonio cultural']"
+299,concurrencia,"['renta', 'remuneración del capital', 'mercado de obligaciones', 'renta del ganadero', 'renta por habitante', 'retribución del trabajo', 'impuesto sobre la renta de sociedades', 'impuesto sobre la renta de las sociedades', 'renta agrícola', 'renta de aduanas', 'renta accesoria', 'irpf', 'asignación de la renta', 'certificado representativo de acciones', 'porcentaje', 'renta garantizada', 'declaración del patrimonio']"
+300,derecho reconocido,['derecho']
+301,capacidad procesal,"['capacidad jurídica', 'incapacidad jurídica', 'capacidad juridica']"
+302,despido procedente,['despido']
+303,derecho de las obligaciones,"['obligación civil', 'derecho']"
+304,subcontrata,['subcontratación']
+305,ley orgánica,"['ley organica', 'ley reguladora de los órganos del estado', 'ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+306,mesa electoral,"['oficina electoral', 'local electoral', 'votación', 'voto electrónico', 'votación secreta', 'voto', 'voto por procuración', 'votación del presupuesto', 'papeleta de voto', 'última vuelta electoral']"
+307,disfrute de derechos,"['personalidad jurídica', 'derecho']"
+308,discriminación indirecta,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+309,protección,"['aislamiento de huecos', 'cavidades']"
+310,compra,['adquisición']
+311,autoridad laboral,"['autoridad', 'desviación de poder']"
+312,autogobierno,['estatuto de autonomía']
+313,turno de trabajo,"['turno', 'trabajo', 'empleo']"
+314,comisión parlamentaria,"['subcomisión parlamentaria', 'comision parlamentaria', 'comisión', 'puesta en servicio']"
+315,fusión internacional,"['absorción de empresas', 'fusión de empresas']"
+316,impuesto,['tributo']
+317,política,['politica']
+318,ocupación efectiva,['ocupación']
+319,despido colectivo,['despido']
+320,prolongación,"['continuación', 'extensión']"
+321,autoridad,['desviación de poder']
+322,empresa de trabajo temporal,"['ett', 'empresa', 'firma']"
+323,ideas políticas,"['política', 'politica']"
+324,condición favorable,['condición']
+325,calendario laboral,['calendario de trabajo']
+326,órgano de administración,['órgano']
+327,responsabilidad del fabricante,"['responsabilidad de productor', 'responsabilidad por vicios ocultos', 'responsabilidad', 'responsabilidad por los daños ecológicos', 'responsabilidad pública', 'responsabilidad legal', 'responsabilidad medioambiental de la empresa', 'utilización pacífica del espacio', 'sociedad limitada', 'responsabilidad del gobierno', 'minoría de edad en derecho penal', 'responsabilidad de la administración pública', 'responsabilidad por vicios ocultos', 'acción por daños y perjuicios']"
+328,aplicación del convenio colectivo,"['aplicación del convenio', 'aplicación', 'despliegue', 'implementación']"
+329,legislación española laboral,"['legislación', 'vertiente jurídica']"
+330,cooperativa europea,"['s coop.', 'coop', 'cooperativas', 'sociedad cooperativa europea', 'bodega cooperativa', 'sociedad cooperativa', 'cooperativa', 's.coop.', 'sociedad cooperativa', 's coop', 'sociedades cooperativas', 'cooperación']"
+331,jornada legal,"['semana de x horas', 'jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'jornada de trabajo', 'jornada laboral']"
+332,remisión normativa,"['remisión', 'remision', 'cura']"
+333,trabajo efectivo,"['ocupación efectiva', 'trabajo', 'empleo']"
+334,institución,"['institucion', 'institucional', 'instituciones']"
+335,periodo anual,['periodo']
+336,contenido,"['range', 'fuerza', 'alcance']"
+337,cobertura universal de enfermedad,"['cobertura sanitaria universal', 'seguridad social', 'protección social', 'seguro social', 'sistema de previsión social', 'previsión social']"
+338,prestación de servicios,['prestación']
+339,formación humana,"['formación', 'educación', 'enseñanza']"
+340,vivienda,"['edificación habitable', 'alojamiento', 'política de la vivienda', 'construcción de viviendas']"
+341,derecho civil,"['derecho común', 'derecho']"
+342,profesión administrativa,"['profesión', 'carrera profesional', 'profesiones', 'profesion']"
+343,prórroga,['prorrogar']
+344,discriminación por razones de orientación sexual,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+345,derechos de información y consulta,['derecho']
+346,incapacidad laboral,"['incapacidad', 'incapacidad civil', 'incapacidad contractual']"
+347,jornada intensiva,"['jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'jornada de trabajo', 'jornada laboral']"
+348,conformidad,['conformismo']
+349,cesión de trabajadores,"['cesión', 'precio de cesión']"
+350,discriminación por razones de afiliación a un sindicato,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+351,servicio laboral,"['servicio', 'servicio económico', 'servicio economico']"
+352,vacaciones,"['turismo', 'viaje por motivos de salud', 'turismo ético', 'turismo náutico', 'turismo de congresos', 'vacaciones en el campo', 'turismo respetuoso del medio ambiente', 'peregrinaje']"
+353,laguna legal,"['legalidad', 'ilegalidad']"
+354,acuerdo de asociación,"['asociación', 'sociedad', 'unión', 'corporación', 'cooperativa', 'contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+355,marco legal,"['marco', 'markka', 'merk', 'marc', 'marka', 'trama', 'mark']"
+356,centro especial de empleo,"['centro especial', 'centro de trabajo', 'lugar de trabajo', 'puesto de trabajo']"
+357,derecho básico,"['derecho civil', 'derecho común', 'derecho']"
+358,tercera edad,['viejo']
+359,recurso colectivo,"['sistema de reparación colectiva', 'recurso', 'acción para entablar recurso', 'demanda de recurso', 'vía de revisión']"
+360,delegado,['delegada']
+361,formación profesional continua,"['formación permanente', 'formación profesional', 'formación preprofesional']"
+362,visado,"['visado turístico', 'visa']"
+363,acción por responsabilidad civil,"['acción', 'programa de acción']"
+364,cuantía,"['cantidad', 'monto', 'importe']"
+365,aplicación del derecho de la ue,"['aplicación del derecho de la unión europea', 'aplicación', 'despliegue', 'implementación']"
+366,comercio,['pequeño comerciante']
+367,amparo de la ley,['amparo']
+368,maternidad,['parto']
+369,organización de la enseñanza,['organización']
+370,comercio al por menor,"['ventas al por menor', 'venta al detalle', 'comercio minorista', 'ventas al detalle', 'venta al por menor', 'comercio', 'pequeño comerciante']"
+371,horario flexible,"['horario variable', 'jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral', 'horario de trabajo', 'hora de trabajo']"
+372,reducción de jornada,"['jornada reducida', 'reducción del tiempo de trabajo', 'reducción del trabajo', 'reducción de jornada laboral', 'jornada', 'trabajo a media jornada', 'día laborable']"
+373,ampliación de jornada,"['ampliación', 'tarjeta gráfica']"
+374,indemnización por despido,['indemnización']
+375,telecomunicación,"['fibra óptica', 'satélite europeo de comunicaciones', 'tecnología de las telecomunicaciones', 'telecomunicación sin hilos', 'telecomunicacion', 'banda ancha']"
+376,contrato indefinido,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+377,servicio,"['servicio económico', 'servicio economico']"
+378,estatuto jurídico,"['personalidad jurídica', 'estatuto', 'reglamento']"
+379,inobservancia,['incumplimiento']
+380,absorción de empresas,"['fusión de empresas', 'concentración económica', 'concentración de sociedades']"
+381,personal de alta dirección,['personal']
+382,armonización de la seguridad social,"['armonización de los regímenes de seguridad social', 'seguridad social', 'protección social', 'seguro social', 'sistema de previsión social', 'previsión social']"
+383,discriminación por razones de discapacidad,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio', 'discapacidad', 'incapacidad', 'incapacidad civil', 'incapacidad contractual']"
+384,empresa,['firma']
+385,usos y costumbres,"['normas consuetudinarias', 'fueros y costumbres']"
+386,acoso sexual,['acoso']
+387,validez,['vigencia']
+388,concentración económica,['concentración de sociedades']
+389,ministerio fiscal,"['ministerio público fiscal', 'profesión jurídica', 'procurador']"
+390,estatuto,['reglamento']
+391,duración,"['duracion', 'vida', 'atención a personas dependientes']"
+392,recurso,"['acción para entablar recurso', 'demanda de recurso', 'vía de revisión']"
+393,legislación laboral,"['legislación', 'vertiente jurídica']"
+394,comportamiento organizacional,['organización']
+395,abogado,"['licenciado', 'letrado', 'licenciado en derecho', 'abogados', 'abogada', 'abogadas', 'licenciada', 'abogacía', 'colegio de abogados']"
+396,administración regional,"['organismo regional', 'administración pública', 'administración del estado', 'gestion publica', 'administración publica', 'oficinas publicas', 'administracion pública', 'oficinas públicas', 'gestión pública', 'gestión publica', 'gestion pública', 'administraciones públicas', 'administracion del estado', 'administracion publica', 'administraciones publicas']"
+397,movimientos de opinión,"['movimientos políticos y sociales', 'movimiento social', 'movimientos sociales']"
+398,legalidad procesal,"['legalidad', 'ilegalidad']"
+399,consumidores,"['economato', 'organización de consumidores', 'legislación en materia de protección de los consumidores', 'plan de acción en favor de los consumidores', 'política de consumo', 'protección del consumidor', 'plan de acción en favor de los consumidores', 'información al consumidor', 'consumidor', 'jrc', 'heterótrofo', 'plan de acción en favor de los consumidores', 'educación del consumidor', 'red para la solución extrajudicial de litigios de consumo']"
+400,comité,['procedimiento de comité']
+401,falta de asistencia injustificada,['falta de asistencia']
+402,restricción de la competencia,"['práctica comercial restrictiva', 'restricción', 'restricción de una función']"
+403,abuso de poder,"['desviación de poder', 'abuso']"
+404,profesión liberal,"['servicios profesionales', 'categoría profesional', 'profesión', 'carrera profesional', 'profesiones', 'profesion']"
+405,ampliación de vacaciones,"['ampliación del periodo de vacaciones', 'ampliación', 'tarjeta gráfica']"
+406,remuneración pactada,['remuneración']
+407,publicidad de los precios,"['marcación de precios', 'indicación del precio', 'publicidad', 'publicitaria', 'mensajes publicitarios', 'diseno publictario', 'spam', 'advertising', 'hacer publico', 'medidas de publicidad', 'diseno publicitario', 'publicidad falsa', 'diseño publicitario', 'reclamación (por mercancía defectuosa)', 'diseño publictario', 'publicitario', 'hacer público', 'mensajes comerciales', 'publicidad comercial', 'propaganda', 'publicidades', 'reclame']"
+408,transferencias sociales,"['ingresos sociales', 'transferencia', 'transferencia directa', 'transconexión', 'cesión de derecho', 'conexión en transferencia', 'cesion de derechos']"
+409,condición de jubilación,"['edad de jubilación', 'condición']"
+410,discriminación por razones de condición social,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+411,productividad del trabajo,"['rendimiento tipo', 'productividad', 'productividad biológica']"
+412,prescripción,['normas de conducta']
+413,movilidad geográfica,"['migración', 'repatriado', 'reunificación familiar', 'migratorio', 'migraciones', 'migración interna', 'tasa de migración', 'migración elegida', 'nuevo asentamiento', 'estadísticas de asilo', 'migración estacional', 'migración de trabajo', 'migratoria', 'migración clandestina', 'emigra', 'migrante comunitario', 'migracion', 'mujer migrante', 'éxodo rural', 'trayecto domicilio-trabajo']"
+414,asesor fiscal,"['asesor de impuestos', 'asesor tributario']"
+415,violencia política,"['revolución', 'política', 'politica']"
+416,suspensión del contrato,"['excedencia', 'suspensión del contrato laboral', 'interrupción de la actividad profesional', 'suspensión']"
+417,trabajo familiar,"['trabajo', 'empleo']"
+418,trabajo sedentario,"['trabajo', 'empleo']"
+419,afinidad,['afiliación']
+420,comportamiento político,"['práctica política', 'política', 'politica']"
+421,admisión,"['admisibilidad', 'procedencia']"
+422,derecho necesario,['derecho']
+423,transferencia de derechos de pensión,"['transferencia de los derechos de pensión', 'transferencia de los derechos a pensión', 'plan de pensiones', 'subsidio de vejez', 'transferencia', 'transferencia directa', 'transconexión', 'cesión de derecho', 'conexión en transferencia', 'cesion de derechos']"
+424,deberes laborales,['deber']
+425,reunión,['reunion']
+426,horario de verano,"['horario de trabajo', 'hora de trabajo']"
+427,ascenso,['promoción']
+428,comercializador,"['comercializadora', 'compañía comercializadora', 'comercio', 'pequeño comerciante']"
+429,instrucción,"['disposición', 'reglamento', 'ordenanza']"
+430,cotización social,"['cuota de la seguridad social', 'seguridad social', 'protección social', 'seguro social', 'sistema de previsión social', 'previsión social', 'cotización']"
+431,seguridad en el trabajo,"['seguridad del trabajador', 'seguridad laboral', 'seguridad en el lugar de trabajo', 'riesgo profesional', 'seguridad social', 'protección social', 'seguro social', 'sistema de previsión social', 'previsión social']"
+432,transferencia,"['transferencia directa', 'transconexión', 'cesión de derecho', 'conexión en transferencia', 'cesion de derechos']"
+433,sistema educativo,['sistema escolar']
+434,garantías del salario,"['salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+435,discriminación por razones de origen étnico,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+436,modificación colectiva,"['modificación', 'propuesta de modificación', 'modificacion', 'mod']"
+437,contrato a tiempo parcial,"['contrato', 'contrato laboral', 'contrato por internet', 'acuerdo', 'convenio']"
+438,medida oportuna,"['medida apropriada', 'medida', 'unidad de medida']"
+439,interés colectivo,"['interés difuso', 'legitimación', 'parte interesada', 'interés legítimo']"
+440,prestación social,"['asistencia social', 'prestación o transferencia social', 'pensión', 'prestación']"
+441,origen étnico,['origen']
+442,artesano,['categoría profesional']
+443,disposiciones reglamentarias,"['reglamentaciones', 'instrucción', 'disposición', 'reglamento', 'ordenanza', 'disposición legal']"
+444,admisibilidad,['procedencia']
+445,origen racial,['origen']
+446,cualificación profesional,"['incompetencia profesional', 'calificación profesional', 'cualificación']"
+447,persona contratada,['personal']
+448,aplicación del convenio,"['aplicación del derecho de la ue', 'aplicación del derecho de la unión europea', 'aplicación', 'despliegue', 'implementación']"
+449,consanguinidad,"['consanguineo', 'consanguíneo', 'consanguineidad']"
+450,paraíso fiscal,"['paraíso bancario', 'paraisos fiscales', 'paraiso fiscal', 'paraíso tributario', 'paraísos fiscales', 'paraíso financiero']"
+451,comunidad intermunicipal,"['comunidad', 'cymuned']"
+452,periodo correspondiente,['periodo']
+453,norma social,"['norma', 'normas sociales', 'ley', 'ley marco', 'norma jurídica', 'reforma de la ley', 'ley constitutiva', 'recurso en interés de ley', 'redacción de la ley', 'ley aplicable', 'ley de patentes', 'propuesta de ley', 'rechazo de la ley', 'orden ministerial', 'infracción del código de tráfico', 'finura milesimal', 'interpretación judicial', 'norma', 'vigencia de la ley', 'comentario sobre un texto legislativo', 'ley electoral nacional', 'ley habilitante', 'violación de la ley', 'retroactividad']"
+454,discriminación por razones de edad,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+455,complemento salarial,"['salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+456,organismo autónomo,"['organización gubernamental', 'organismo autonomo', 'agencia estatal', 'organismo autonomo administrativo', 'agencia publica', 'organismo autónomo', 'organismo publico', 'agencia gubernamental', 'organismo autónomo administrativo', 'organizacion gubernamental', 'agencia pública', 'organismo']"
+457,jornada ordinaria,"['jornada de trabajo', 'jornada laboral']"
+458,profesión independiente,"['servicios subcontratados', 'trabajador por cuenta propia', 'profesión', 'carrera profesional', 'profesiones', 'profesion', 'categoría profesional']"
+459,estatuto jurídico europeo,"['estatuto', 'reglamento', 'estatuto jurídico', 'personalidad jurídica', 'personalidad jurídica']"
+460,transferencia de capitales,"['transferencia monetaria', 'transferencia', 'transferencia directa', 'transconexión', 'cesión de derecho', 'conexión en transferencia', 'cesion de derechos']"
+461,renta complementaria,"['renta accesoria', 'remuneración', 'renta', 'remuneración del capital', 'mercado de obligaciones', 'renta del ganadero', 'renta por habitante', 'retribución del trabajo', 'impuesto sobre la renta de sociedades', 'impuesto sobre la renta de las sociedades', 'renta agrícola', 'renta de aduanas', 'renta accesoria', 'irpf', 'asignación de la renta', 'certificado representativo de acciones', 'porcentaje', 'renta garantizada', 'declaración del patrimonio']"
+462,discriminación por razones de convicciones,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+463,gestoría,"['gestión', 'management', 'administración']"
+464,personalidad jurídica,"['derecho civil', 'derecho común']"
+465,derechos básicos,['derecho']
+466,negociación colectiva,"['pacto o contrato colectivo', 'negociacion colectiva', 'acuerdo de closed shop']"
+467,trabajador autónomo,"['trabajador por cuenta propia', 'trabajador', 'empleado', 'miembro del personal', 'trabajo', 'empleo']"
+468,tutela administrativa,"['administración', 'ubicación del organismo público']"
+469,elaboración de políticas,"['formulación de políticas', 'política', 'politica']"
+470,acción protectora,"['acción', 'programa de acción']"
+471,discriminación por razones de origen racial,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+472,derecho económico,['derecho']
+473,prima salarial,"['sobresueldo', 'salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra', 'remuneración']"
+474,precepto jurídico,['precepto']
+475,legitimación,"['parte interesada', 'interés legítimo', 'admisibilidad', 'procedencia']"
+476,discriminación por razones de sexo,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+477,legislación,['vertiente jurídica']
+478,jornada especial,"['jornada de trabajo', 'jornada laboral']"
+479,representación del personal,"['representación de los trabajadores', 'representación legal', 'representante legal', 'representación jurídica']"
+480,modificación sustancial,"['modificación', 'propuesta de modificación', 'modificacion', 'mod']"
+481,gestor,"['gestión', 'management', 'administración']"
+482,competencia,"['marco común europeo de referencia para las lenguas', 'competencia institucional ce', 'política de competencia de la unión europea', 'competencia de la unión europea', 'competencias externas ce', 'competencia compartida', 'competencia por razón de materia', 'incompetencia profesional', 'práctica comercial restrictiva', 'competencia económica', 'reglamentación de la competencia', 'competencia de apoyo', 'dominio de las herramientas informáticas', 'competencia judicial', 'competencia economica']"
+483,protección del consumidor,"['plan de acción en favor de los consumidores', 'protección', 'aislamiento de huecos', 'cavidades']"
+484,comunidad,['cymuned']
+485,conflicto,"['conflicto dramatico', 'conflicto dramático']"
+486,dignidad,['dignidad humana']
+487,retención,['retención fiscal en la fuente']
+488,horario,['organización de la enseñanza']
+489,pariente por consanguinidad,['pariente']
+490,adopción de medidas cautelares,"['adopción', 'adopcion', 'filiación adoptiva']"
+491,pacto de no concurrencia,"['cláusula inhibitoria de la competencia', 'pacto']"
+492,marco común de referencia,"['mcr', 'marco', 'markka', 'merk', 'marc', 'marka', 'trama', 'mark']"
+493,amortización,"['amortizada', 'amortizacion', 'amortizar', 'amortización industrial']"
+494,afiliación a un sindicato,"['afinidad', 'afiliación']"
+495,crédito salarial,"['derecho al salario', 'crédito', 'compra a plazos', 'créditos']"
+496,acción social,"['acción', 'programa de acción']"
+497,hora ordinaria,"['horario de trabajo', 'hora de trabajo']"
+498,mandato electoral,"['mandato', 'orden de pago', 'libramiento', 'libranza', 'procuración']"
+499,tiempo de descanso,"['permiso', 'jornada', 'jornada de trabajo', 'día laborable', 'jornada laboral']"
+500,acumulación de pensiones,"['plan de pensiones', 'subsidio de vejez']"
+501,discriminación por razones de lengua,"['discriminación', 'discriminación social', 'discriminación de género', 'discriminador', 'discriminatorio']"
+502,grado superior,['grado']
+503,modificación individual,"['modificación', 'propuesta de modificación', 'modificacion', 'mod']"
+504,promoción económica,"['fomento económico', 'impulso económico', 'promoción']"
+505,remisión,"['remision', 'cura']"
+506,marco europeo,"['marco', 'markka', 'merk', 'marc', 'marka', 'trama', 'mark']"
+507,cesión,['precio de cesión']
+508,renta,"['remuneración del capital', 'mercado de obligaciones', 'renta del ganadero', 'renta por habitante', 'retribución del trabajo', 'impuesto sobre la renta de sociedades', 'impuesto sobre la renta de las sociedades', 'renta agrícola', 'renta de aduanas', 'renta accesoria', 'irpf', 'asignación de la renta', 'certificado representativo de acciones', 'porcentaje', 'renta garantizada', 'declaración del patrimonio']"
+509,colectivo,['sistema de reparación colectiva']
+510,política cultural,"['política', 'politica']"
+511,estatuto de los trabajadores,"['et', 'estatuto jurídico', 'personalidad jurídica', 'estatuto', 'reglamento']"
+512,abogacía,['colegio de abogados']
+513,salario mínimo,"['salario minimo', 'sueldo sujeto al índice del coste de la vida', 'salario mínimo legal mensual vigente', 'sueldo mínimo', 'ingreso minimo mensual', 'ingreso mínimo mensual', 'sueldo minimo', 'salario minimo legal mensual vigente', 'salario minimo interprofesional', 'remuneracion minima vital', 'remuneración mínima', 'remuneracion minima', 'salario mínimo interprofesional', 'remuneración mínima vital', 'salario', 'remuneración salarial', 'salario-hora profesional', 'salarial', 'tarifa de salarios', 'sueldo', 'jornal', 'nómina', 'salario móvil', 'honorarios', 'estipendio', 'salario por unidad de obra']"
+514,supresión de empleo,"['pérdida de empleo', 'reducción del personal', 'verringerung der belegschaft', 'supresión']"
+515,asociación sectores público y privado,"['sociedad público-privada', 'asociación', 'sociedad', 'unión', 'corporación', 'cooperativa']"
+516,trabajo escolar,"['trabajos extraescolares', 'trabajos escolares', 'deberes escolares', 'tarea escolar', 'trabajo extraescolar', 'trabajo', 'empleo']"
+517,comisión negociadora,"['comisión', 'puesta en servicio']"
+518,hogar,"['unidad familiar', 'familia']"
+519,fiestas,['fiesta oficial']
+520,interrupción,['paro de la producción']
+521,personal,"['empresa', 'firma']"
+522,remuneración en especie,"['beneficio no pecuniario', 'remuneración']"
+523,restricción,['restricción de una función']
+524,reclamación,"['denuncia', 'acción restitutoria']"
+525,despido disciplinario,['despido']
+526,seguridad del producto,"['consumidores', 'economato', 'organización de consumidores', 'legislación en materia de protección de los consumidores', 'plan de acción en favor de los consumidores', 'política de consumo']"
