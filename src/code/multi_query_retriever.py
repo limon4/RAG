@@ -17,8 +17,8 @@ class MultiQueryRetriever:
         self.results = []
         self.reranker_model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.reranker_tokenizer = AutoTokenizer.from_pretrained(self.reranker_model_name, token=token)
-        self.reranker_model = AutoModelForSequenceClassification.from_pretrained(self.reranker_model_name, token=token)
+        self.reranker_tokenizer = AutoTokenizer.from_pretrained(self.reranker_model_name)
+        self.reranker_model = AutoModelForSequenceClassification.from_pretrained(self.reranker_model_name)
         self.reranker_model.to(self.device)
 
     def _add_documents(self, document: tuple[Document, float]):
