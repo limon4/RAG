@@ -1,3 +1,6 @@
+import os
+
+from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -12,6 +15,8 @@ class Retriever:
         :param embedding_model: Modelo de embeddings que se desea emplear.
         """
 
+        load_dotenv()
+        token = os.getenv('TOKEN')
         self.pdf_file_path = pdf_file_path
         self.embedding_model = embedding_model
 
@@ -23,7 +28,7 @@ class Retriever:
         #inicializamos el modelo para el cálculo de embeddings
         self.embeddings = HuggingFaceEmbeddings(
                 model_name=self.embedding_model,
-                model_kwargs={'device': 'cpu', 'use_auth_token': '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'},
+                model_kwargs={'device': 'cpu', 'use_auth_token': token},
                 encode_kwargs={'normalize_embeddings': True}
         )
 

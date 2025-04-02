@@ -1,7 +1,7 @@
 import os
-
 import pandas as pd
 import torch.cuda
+from dotenv import load_dotenv
 from langchain_core.documents import Document
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
@@ -10,13 +10,15 @@ class MultiQueryRetriever:
 
     def __init__(self, vector_store):
 
+        load_dotenv()
+        token = os.getenv('TOKEN')
         self.vector_db = vector_store
         self.docs = []
         self.results = []
         self.reranker_model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.reranker_tokenizer = AutoTokenizer.from_pretrained(self.reranker_model_name, token='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')
-        self.reranker_model = AutoModelForSequenceClassification.from_pretrained(self.reranker_model_name, token='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')
+        self.reranker_tokenizer = AutoTokenizer.from_pretrained(self.reranker_model_name, token=token)
+        self.reranker_model = AutoModelForSequenceClassification.from_pretrained(self.reranker_model_name, token=token)
         self.reranker_model.to(self.device)
 
     def _add_documents(self, document: tuple[Document, float]):

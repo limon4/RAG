@@ -1,8 +1,0 @@
-LLM Models:
-granite3-dense
-llama3.2
-mistral
-
-Embedding models:
-PlanTL-GOB-ES/roberta-base-bne
-PlanTL-GOB-ES/RoBERTalex
